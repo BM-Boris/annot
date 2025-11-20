@@ -5,7 +5,7 @@ Lightweight Python helpers to annotate untargeted metabolomics feature tables fo
 ## Installation
 
 ```bash
-pip install git+https://github.com/BM-Boris/annot.git .
+pip install git+https://github.com/BM-Boris/annot.git
 ```
 
 Requires Python 3.8+, `pandas`, `numpy`, and `tqdm` (installed automatically).
