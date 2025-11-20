@@ -91,6 +91,7 @@ def run_lc(
     adducts: list[str] | None = None,
     lib: str = "hmdb",
     shift: str | float = "auto",
+    show_progress: bool = True,
 ) -> pd.DataFrame:
     """
     Annotate LC-MS data by matching m/z features to either the HMDB-based library
@@ -297,7 +298,7 @@ def run_lc(
     best_distances: list[float | None] = []
     candidates_all: list[list[dict] | None] = []
 
-    for i_feat, mz in enumerate(tqdm(mz_array)):
+    for i_feat, mz in enumerate(tqdm(mz_array,disable=not show_progress)):
         best_distance = None
         best_ppm = None
         best_name = None
@@ -423,6 +424,7 @@ def run_gc(
     mz_diff: float = 5e-6,
     time_range: float = 2.0,
     ngroup: int = 3,
+    show_progress: bool = True,
 ) -> pd.DataFrame:
     """
     Annotate GC-MS data by matching features to a reference library with RT anchoring.
@@ -578,7 +580,7 @@ def run_gc(
 
     time_array = time_array - float(shift)
 
-    for i in tqdm(range(len(mz_array))):
+    for i in tqdm(range(len(mz_array)),disable=not show_progress):
         dmz = mz_array[i] - lib_mz_array
         dt = time_array[i] - lib_time_array
         distances = dmz**2 + 1e-7 * (dt**2)
