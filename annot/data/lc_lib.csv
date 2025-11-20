@@ -1,0 +1,515 @@
+#,Metabolite,Formula,MonoisotopicMass,MzAdduct,RT_sec,Method,HMDB_ID,KEGG_ID,Type
+1,Glycine,C2H5NO2,75.032,120.0032 (M+2Na-H),75.0,HILIC+,HMDB0000123,C00037,Amino acids and AA-derivatives
+2,Alanine,C3H7NO2,89.0477,90.0550 (M+H),75.0,HILIC+,HMDB0000161,C00041,Amino acids and AA-derivatives
+3,Beta-alanine,C3H7NO2,89.0477,90.0550 (M+H),75.0,HILIC+,HMDB0000056,C00099,Amino acids and AA-derivatives
+4,Sarcosine,C3H7NO2,89.0477,90.0550 (M+H),75.0,HILIC+,HMDB0000271,C00213,Amino acids and AA-derivatives
+5,Serine,C3H7NO3,105.0426,106.0499 (M+H),87.0,HILIC+,HMDB0000187,C00065,Amino acids and AA-derivatives
+6,Proline,C5H9NO2,115.0633,116.0706 (M+H),65.0,HILIC+,HMDB0000162,C00148,Amino acids and AA-derivatives
+7,Valine,C5H11NO2,117.079,118.0863 (M+H),52.0,HILIC+,HMDB0000883,C00183,Amino acids and AA-derivatives
+8,Threonine,C4H9NO3,119.0582,120.0655 (M+H),77.0,HILIC+,HMDB0000167,C00188,Amino acids and AA-derivatives
+9,Leucine,C6H13NO2,131.0946,132.1018 (M+H),48.0,HILIC+,HMDB0000687,C00123,Amino acids and AA-derivatives
+10,Isoleucine,C6H13NO2,131.0946,132.1018 (M+H),48.0,HILIC+,HMDB0000172,C00407,Amino acids and AA-derivatives
+"[9,10]",Leu/Iso,C6H13NO2,131.0946,132.1018 (M+H),48.0,HILIC+,-,-,Amino acids and AA-derivatives
+11,Asparagine,C4H8N2O3,132.0535,133.0608 (M+H),91.0,HILIC+,HMDB0000168,C00152,Amino acids and AA-derivatives
+12,Aspartate,C4H7NO4,133.0375,134.0448 (M+H),85.0,HILIC+,HMDB0000191,C00049,Amino acids and AA-derivatives
+13,Glutamine,C5H10N2O3,146.0691,147.0764 (M+H),87.0,HILIC+,HMDB0000641,C00064,Amino acids and AA-derivatives
+14,Glutamate,C5H9NO4,147.0531,146.0458 (M-H),20.0,C18-,HMDB0000148,C00025,Amino acids and AA-derivatives
+15,Lysine,C6H14N2O2,146.1055,145.0983 (M-H),69.0,C18-,HMDB0000182,C00047,Amino acids and AA-derivatives
+16,Methionine,C5H11NO2S,149.0511,150.0583 (M+H),53.0,HILIC+,HMDB0000696,C00073,Amino acids and AA-derivatives
+17,Histidine,C6H9N3O2,155.0695,154.0622 (M-H),23.0,C18-,HMDB0000177,C00135,Amino acids and AA-derivatives
+18,Phenylalanine,C9H11NO2,165.079,166.0863 (M+H),48.0,HILIC+,HMDB0000159,C00079,Amino acids and AA-derivatives
+19,Tyrosine,C9H11NO3,181.0739,182.0812 (M+H),49.0,HILIC+,HMDB0000158,C00082,Amino acids and AA-derivatives
+20,Tryptophan,C11H12N2O2,204.0899,203.0826 (M-H),26.0,C18-,HMDB0030396,C00078,Amino acids and AA-derivatives
+21,Arginine,C6H14N4O2,174.1117,173.1044 (M-H),23.0,C18-,HMDB0000517,C00062,Amino acids and AA-derivatives
+23,Cystine,C6H12N2O4S2,240.0239,241.0311 (M+H),211.0,HILIC+,HMDB0000192,C00491,Amino acids and AA-derivatives
+24,Creatine,C4H9N3O2,131.0695,132.0768 (M+H),55.0,HILIC+,HMDB0000064,C00300,Amino acids and AA-derivatives
+25,Creatinine,C4H7N3O,113.0589,114.0662 (M+H),40.0,HILIC+,HMDB0000562,C00791,Amino acids and AA-derivatives
+26,Creatine Phosphate,C4H10N3O5P,211.0358,212.0431 (M+H),111.0,HILIC+,HMDB0001511,C02305,Amino acids and AA-derivatives
+27,Guanidinoacetate,C3H7N3O2,117.0538,118.0611 (M+H),70.0,HILIC+,HMDB0000128,C00581,Amino acids and AA-derivatives
+28,Guanidinosuccinate,C5H9N3O4,175.0593,176.0666 (M+H),74.0,HILIC+,HMDB0003157,C03139,Amino acids and AA-derivatives
+29,Guanidinobutanote,C5H11N3O2,145.0851,146.0924 (M+H),38.0,HILIC+,HMDB0003464,C01035,Amino acids and AA-derivatives
+30,Taurine,C2H7NO3S,125.0147,126.0219 (M+H),63.0,HILIC+,HMDB0000251,C00245,Amino acids and AA-derivatives
+31,Hypotaurine,C2H7NO2S,109.0198,110.0270 (M+H),77.0,HILIC+,HMDB0000965,C00519,Amino acids and AA-derivatives
+32,Pyrogluamate (Oxoproline),C5H7NO3,129.0426,130.0499 (M+H),40.0,HILIC+,HMDB0000267,C01879,Amino acids and AA-derivatives
+33,Methionine Sulfoxide,C5H11NO3S,165.046,166.0532 (M+H),88.0,HILIC+,HMDB0002005,C02989,Amino acids and AA-derivatives
+34,S-adenosylmethionine,C15H23N6O5S,398.1372,399.1445 (M+H),133.0,HILIC+,HMDB0001185,C00019,Amino acids and AA-derivatives
+35,S-adenosylhomocysteine,C14H20N6O5S,384.1216,385.1294 (M+H),80.0,HILIC+,HMDB0000939,C00021,Amino acids and AA-derivatives
+36,Cysteamine,C2H7NS,77.02992,153.0515 (2M-H),76.0,HILIC+,HMDB0002991,C01678,Amino acids and AA-derivatives
+37,Cystathionine,C7H14N2O4S,222.0674,223.0752 (M+H),197.0,HILIC+,HMDB0000099,C02291,Amino acids and AA-derivatives
+38,Homocysteine,C4H9NO2S,135.0353,136.0432 (M+H),138.0,HILIC+,HMDB0000742,C00155,Amino acids and AA-derivatives
+39,Homocystine,C8H16N2O4S2,268.0551,269.0625 (M+H),146.0,HILIC+,HMDB0000676,C01817,Amino acids and AA-derivatives
+40,N-acetylcysteine,C5H9NO3S,163.0303,164.0376 (M+H),43.0,HILIC+,HMDB0001890,C06809,Amino acids and AA-derivatives
+41,L-Homocysteine thiolactone,C4H7NOS,117.0248,118.0321 (M+H),37.0,HILIC+,HMDB0002287,-,Amino acids and AA-derivatives
+42,Nitrotyrosine,C9H10N2O5,226.059,227.0663 (M+H),53.0,HILIC+,HMDB0001904,-,Amino acids and AA-derivatives
+43,Methionine sulfoximine,C5H12N2O3S,180.0569,181.0642 (M+H),91.0,HILIC+,HMDB0029430,C03510,Amino acids and AA-derivatives
+44,Formyl methionyl peptide,C6H11NO3S,177.046,178.0532 (M+H),34.0,HILIC+,-,-,Amino acids and AA-derivatives
+45,Ophthalmic acid,C11H19N3O6,289.12739,290.1347 (M+H),80.0,HILIC+,HMDB0005765,-,Amino acids and AA-derivatives
+46,Glutathione,C10H17N3O6S,307.0838,308.0911 (M+H),80.0,HILIC+,HMDB0000125,C00051,Amino acids and AA-derivatives
+47,Glutathione disulfide,C20H32N6O12S2,612.152,613.1593 (M+H),270.0,HILIC+,HMDB0003337,C00127,Amino acids and AA-derivatives
+48,Asymmetric dimethylarginine (ADMA),C8H18N4O2,202.143,203.1503 (M+H),79.0,HILIC+,HMDB0001539,C03626,Amino acids and AA-derivatives
+49,Symmetric dimethylarginine (SDMA),C8H18N4O2,202.143,203.1503 (M+H),79.0,HILIC+,HMDB0003334,-,Amino acids and AA-derivatives
+"[48,49]",Dimethylarginine,C8H18N4O2,202.143,203.1503 (M+H),79.0,HILIC+,-,-,Amino acids and AA-derivatives
+50,Agmatine,C5H14N4,130.1218,131.1296 (M+H),74.0,HILIC+,HMDB0001432,C00179,Amino acids and AA-derivatives
+51,Carnosine,C9H14N4O3,226.1066,227.1139 (M+H),107.0,HILIC+,HMDB0000033,C00386,Amino acids and AA-derivatives
+52,Anserine,C10H16N4O3,240.1222,241.1295 (M+H),102.0,HILIC+,HMDB0000194,C01262,Amino acids and AA-derivatives
+53,1-Methylhistidine,C7H11N3O2,169.0851,170.0924 (M+H),92.0,HILIC+,HMDB0000001,C01152,Amino acids and AA-derivatives
+54,3-Methylhistidine,C7H11N3O2,169.0851,170.0924 (M+H),102.0,HILIC+,HMDB0000479,C01152,Amino acids and AA-derivatives
+"[53,54]",Methylhistidine,C7H11N3O2,169.0851,170.0924 (M+H),97.0,HILIC+,-,C01152,Amino acids and AA-derivatives
+55,Histidinol,C6H11N3O,141.0902,142.0975 (M+H),74.0,HILIC+,HMDB0003431,C00860,Amino acids and AA-derivatives
+56,Histamine,C5H9N3,111.0797,112.0869 (M+H),74.0,HILIC+,HMDB0000870,C00388,Amino acids and AA-derivatives
+57,1-Methylhistamine,C6H11N3,125.0953,126.1026 (M+H),73.0,HILIC+,HMDB0000898,C05127,Amino acids and AA-derivatives
+58,3-Methylhistamine,C6H11N3,125.0953,126.1026 (M+H),73.0,HILIC+,HMDB0001861,-,Amino acids and AA-derivatives
+"[57,58]",Methylhistamine,C6H11N3,125.0953,126.1026 (M+H),73.0,HILIC+,-,-,Amino acids and AA-derivatives
+59,Urocanate,C6H6N2O2,138.0429,139.0502 (M+H),38.0,HILIC+,HMDB0000301,C00785,Amino acids and AA-derivatives
+60,Thyrotropin Releasing Hormone,C16H22N6O4,362.1703,361.1630 (M-H),24.0,C18-,HMDB0060080,-,Amino acids and AA-derivatives
+61,Diiodothyronine,C15H13I2NO4,524.8934,523.8861 (M-H),31.0,C18-,HMDB0000582,-,Amino acids and AA-derivatives
+62,"(3,5)-Diiodotyrosine",C9H9I2NO3,432.8672,433.8744 (M+H),47.0,HILIC+,HMDB0003474,C01060,Amino acids and AA-derivatives
+63,Triiodothyronine,C15H12I3NO4,650.7901,651.7973 (M+H),38.0,HILIC+,HMDB0000265,C02465,Amino acids and AA-derivatives
+64,Thyroxine,C15H11I4NO4,776.6867,775.6794 (M-H),72.0,C18-,HMDB0000248,C01829,Amino acids and AA-derivatives
+"[63,64]",3-Methoxytyrosine,C10H17NO6,211.0845,212.0917 (M+H),55.0,HILIC+,HMDB0001434,-,Amino acids and AA-derivatives
+65,Tyramine,C8H11NO,137.0841,138.0913 (M+H),31.0,HILIC+,HMDB0000306,C00483,Amino acids and AA-derivatives
+66,Phenylethanolamine,C8H11NO,137.0841,138.0913 (M+H),32.0,HILIC+,HMDB0001065,C02735,Amino acids and AA-derivatives
+"[65,66]",Tyramine/Phenylethanolamine,C8H11NO,137.0841,138.0913 (M+H),32.0,HILIC+,-,-,Amino acids and AA-derivatives
+67,3-Methoxytyramine,C9H13NO2,167.0946,168.1018 (M+H),30.0,HILIC+,HMDB0000022,C05587,Amino acids and AA-derivatives
+68,4-Methoxytyramine,C9H13NO2,167.0946,168.1018 (M+H),30.0,HILIC+,HMDB0012162,-,Amino acids and AA-derivatives
+"[67,68]",Methoxytyramine (3 or 4),C9H13NO2,167.0946,168.1018 (M+H),30.0,HILIC+,-,-,Amino acids and AA-derivatives
+69,Normetanephrine,C9H13NO3,183.0895,184.0968 (M+H),32.0,HILIC+,HMDB0000819,C05589,Amino acids and AA-derivatives
+70,Epinephrine,C9H13NO3,183.0895,184.0968 (M+H),32.0,HILIC+,HMDB0000068,C00788,Amino acids and AA-derivatives
+"[69,70]",Epinephrine/Normetanephrine,C9H13NO3,183.0895,184.0968 (M+H),32.0,HILIC+,-,-,Amino acids and AA-derivatives
+71,Octopamine,C8H11NO2,153.079,154.0863 (M+H),33.0,HILIC+,HMDB0004825,C04227,Amino acids and AA-derivatives
+72,Dopamine,C8H11NO2,153.079,154.0863 (M+H),33.0,HILIC+,HMDB0000073,C03758,Amino acids and AA-derivatives
+"[71,72]",Octopamine/Dopamine,C8H11NO2,153.079,154.0863 (M+H),33.0,HILIC+,-,-,Amino acids and AA-derivatives
+73,L-dopa,C9H11NO4,197.0688,198.0761 (M+H),62.0,HILIC+,HMDB0000181,C00355,Amino acids and AA-derivatives
+74,Acetylphenylalanine,C11H13NO3,207.0895,208.0968 (M+H),30.0,HILIC+,HMDB0000512,C03519,Amino acids and AA-derivatives
+75,Kynurenine,C10H12N2O3,208.0848,209.0921 (M+H),50.0,HILIC+,HMDB0000684,C00328,Amino acids and AA-derivatives
+76,Hydroxykynurenine,C10H12N2O4,224.0797,225.0870 (M+H),55.0,HILIC+,HMDB0000732,C02794,Amino acids and AA-derivatives
+77,Kynurenic acid,C10H7NO3,189.0426,190.0499 (M+H),48.0,HILIC+,HMDB0000715,C01717,Amino acids and AA-derivatives
+78,Xanthurenic acid,C10H7NO4,205.0375,206.0448 (M+H),50.0,HILIC+,HMDB0000881,C02470,Amino acids and AA-derivatives
+79,5-Hydroxytryptophan,C11H12N2O3,220.0848,221.0921 (M+H),59.0,HILIC+,HMDB0000472,C01017,Amino acids and AA-derivatives
+80,Tryptamine,C10H12N2,160.1001,161.1074 (M+H),28.0,HILIC+,-,C00398,Amino acids and AA-derivatives
+81,Tryptophanamide,C11H13N3O,203.1059,204.1131 (M+H),38.0,HILIC+,HMDB0013318,C00977,Amino acids and AA-derivatives
+82,N-methyltryptamine,C11H13N2,174.1157,175.1230 (M+H),29.0,HILIC+,HMDB0004370,C06213,Amino acids and AA-derivatives
+83,Serotonin,C10H12N2O,176.095,177.1022 (M+H),31.0,HILIC+,HMDB0000259,C00780,Amino acids and AA-derivatives
+84,N-Acetylserotonin,C12H14N2O2,218.1055,219.1128 (M+H),30.0,HILIC+,HMDB0001238,C00978,Amino acids and AA-derivatives
+85,5-Hydroxyindoleacetic acid,C10H9NO3,191.0582,192.0657 (M+H),31.0,HILIC+,HMDB0000763,C05635,Amino acids and AA-derivatives
+86,Indole-3-acetaldehyde,C10H9NO,159.0684,158.0611 (M-H),60.0,C18-,HMDB0001190,C00637,Amino acids and AA-derivatives
+87,Indoleacetate,C10H9NO2,175.0633,174.0561 (M-H),27.0,C18-,HMDB0000197,C00954,Amino acids and AA-derivatives
+88,Indole 3-acetamide,C10H10N2O,174.0793,175.0866 (M+H),31.0,HILIC+,HMDB0029739,C02693,Amino acids and AA-derivatives
+89,Methyl indoleacetate,C11H11NO2,189.079,190.0863 (M+H),29.0,HILIC+,HMDB0029738,-,Amino acids and AA-derivatives
+90,Indole propionate,C11H11NO2,189.079,190.0863 (M+H),29.0,HILIC+,HMDB0002302,-,Amino acids and AA-derivatives
+"[89,90]",MIA/IPA,C11H11NO2,189.079,190.0863 (M+H),29.0,HILIC+,-,-,Amino acids and AA-derivatives
+91,Acetyltryptophan,C13H14N2O3,246.1004,247.108 (M+H),30.0,HILIC+,HMDB0013713,-,Amino acids and AA-derivatives
+92,Melatonin,C13H16N2O2,232.1212,233.1285 (M+H),29.0,HILIC+,HMDB0001389,C01598,Amino acids and AA-derivatives
+93,Imidazoleacetate,C5H6N2O2,126.0429,127.0502 (M+H),71.0,HILIC+,HMDB0002024,C02835,Amino acids and AA-derivatives
+94,Methyloxindole/Indolecarbinol,C9H9NO,147.0684,148.0757 (M+H),29.0,HILIC+,HMDB0004186,CA1325,Amino acids and AA-derivatives
+95,Ethyl indoleacetate,C12H13NO2,203.0946,204.1019 (M+H),27.0,HILIC+,-,CA1213,Amino acids and AA-derivatives
+96,Indole ethanol (Tryptophanol),C10H11NO,161.0841,162.0914 (M+H),30.0,HILIC+,HMDB0003447,C00955,Amino acids and AA-derivatives
+97,"N6,N6,N6-Trimethyllysine",C9H20N2O2,188.1525,189.1598 (M+H),107.0,HILIC+,HMDB0001325,C03793,Amino acids and AA-derivatives
+98,Hydroxylysine,C6H14N2O3,162.1004,163.1077 (M+H),145.0,HILIC+,HMDB0000450,C16741,Amino acids and AA-derivatives
+99,Acetyllysine,C8H16N2O3,188.1161,189.1234 (M+H),76.0,HILIC+,HMDB0000446,C12989,Amino acids and AA-derivatives
+100,Pipecolate,C6H11NO2,129.079,130.0863 (M+H),61.0,HILIC+,HMDB0000070,C00408,Amino acids and AA-derivatives
+101,alpha-Aminoadipate,C6H11NO4,161.0688,162.0761 (M+H),74.0,HILIC+,HMDB0000510,C00956,Amino acids and AA-derivatives
+102,Ornithine,C5H12N2O2,132.0899,133.0972 (M+H),110.0,HILIC+,HMDB0000214,C00077,Amino acids and AA-derivatives
+103,Citrulline,C6H13N3O3,175.0957,176.103 (M+H),91.0,HILIC+,HMDB0000904,C00327,Amino acids and AA-derivatives
+104,5-Aminovaleric acid,C5H11NO2,117.079,118.0863 (M+H),39.0,HILIC+,HMDB0003355,C00431,Amino acids and AA-derivatives
+105,Diaminopimelate,C7H14N2O4,190.0954,189.0881 (M-H),19.0,C18-,HMDB0001370,C00666,Amino acids and AA-derivatives
+106,Sulfinoalanine,C3H7NO4S,153.0096,154.0169 (M+H),120.0,HILIC+,HMDB0000996,C00606,Amino acids and AA-derivatives
+107,Hydroxyproline,C5H9NO3,131.0582,132.0655 (M+H),77.0,HILIC+,HMDB0000725,C01157,Amino acids and AA-derivatives
+108,5-Aminolevulinate,C5H9NO3,131.0582,132.0655 (M+H),45.0,HILIC+,HMDB0001149,C00430,Amino acids and AA-derivatives
+109,N-Acetylalanine,C5H9NO3,131.0582,132.0655 (M+H),36.0,HILIC+,HMDB0000766,-,Amino acids and AA-derivatives
+110,N-Acetylglycine,C4H7NO3,117.0426,118.0499 (M+H),37.0,HILIC+,HMDB0000532,-,Amino acids and AA-derivatives
+111,N-Acetylleucine,C8H15NO3,173.1052,174.1125 (M+H),31.0,HILIC+,HMDB0011756,C02710,Amino acids and AA-derivatives
+112,N-Acetylaspartate,C6H9NO5,175.0481,174.0408 (M-H),21.0,C18-,HMDB0000812,C01042,Amino acids and AA-derivatives
+113,N-Methyl-D-aspartate,C5H9NO4,147.0531,148.0604 (M+H),77.0,HILIC+,HMDB0002393,C12269,Amino acids and AA-derivatives
+114,O-Acetylserine,C5H9NO4,147.0531,148.0604 (M+H),84.0,HILIC+,HMDB0003011,C00979,Amino acids and AA-derivatives
+115,N-Acetylserine,C5H9NO4,147.0531,148.0604 (M+H),42.0,HILIC+,HMDB0002931,-,Amino acids and AA-derivatives
+116,N-Methyl-glutamate,C6H11NO4,161.0688,162.0761 (M+H),74.0,HILIC+,HMDB0062660,C01046,Amino acids and AA-derivatives
+117,Acetylglutamate,C7H11NO5,189.0637,188.0564 (M-H),21.0,C18-,HMDB0001138,C00624,Amino acids and AA-derivatives
+118,2-Aminobutyrate,C4H9NO2,103.0633,104.0706 (M+H),70.0,HILIC+,HMDB0000452,C02356,Amino acids and AA-derivatives
+119,GABA (4-Aminobutyrate),C4H9NO2,103.0633,104.0706 (M+H),45.0,HILIC+,HMDB0000112,C00334,Amino acids and AA-derivatives
+120,3-Aminoisobutanoate,C4H9NO2,103.0633,104.0706 (M+H),45.0,HILIC+,HMDB0003911,C05145,Amino acids and AA-derivatives
+122,Acetamidobutanoate,C6H11NO3,145.0739,146.0812 (M+H),34.0,HILIC+,HMDB0003681,C02712,Amino acids and AA-derivatives
+123,Acetylmethionine,C7H13NO3S,191.0616,190.0543 (M-H),22.0,C18-,HMDB0011745,C05335,Amino acids and AA-derivatives
+124,Selenomethionine,C5H11NO2Se,196.9955,198.0028 (M+H),53.0,HILIC+,HMDB0003966,C00263,Amino acids and AA-derivatives
+125,Selenocystamine,C4H12N2Se2,247.9331,248.9409 (M+H),74.0,HILIC+,-,-,Amino acids and AA-derivatives
+126,Homoserine,C4H9NO3,119.0582,120.0655 (M+H),77.0,HILIC+,HMDB0000719,C00022,Amino acids and AA-derivatives
+127,1-Aminocyclopropane-1-carboxylate,C4H7NO2,101.0477,102.0550 (M+H),60.0,HILIC+,HMDB0036458,C01234,Amino acids and AA-derivatives
+128,Norvaline,C5H11NO2,117.079,118.0863 (M+H),52.0,HILIC+,HMDB0013716,C01826,Amino acids and AA-derivatives
+129,Formylglycine,C3H5NO3,103.0269,104.0342 (M+H),40.0,HILIC+,HMDB0011602,-,Amino acids and AA-derivatives
+130,Diaminopropionate,C3H8N2O2,104.0586,105.0659 (M+H),110.0,HILIC+,HMDB0002006,-,Amino acids and AA-derivatives
+131,Ureidopropionate,C4H8N2O3,132.0535,133.0608 (M+H),40.0,HILIC+,HMDB0000026,C02642,Amino acids and AA-derivatives
+132,Putrescine,C4H12N2,88.1001,89.1073 (M+H),73.0,HILIC+,HMDB0001414,C00134,Amines
+133,N-Acetylputrescine,C6H14N2O,130.1106,131.1179 (M+H),43.0,HILIC+,HMDB0002064,C02714,Amines
+134,Spermidine,C7H19N3,145.1579,146.1652 (M+H),121.0,HILIC+,HMDB0001257,C00315,Amines
+135,"N1, N8-acetylspermidine",C12H28N4O,244.2263,245.2336 (M+H),42.0,HILIC+,-,-,Amines
+136,Benzylamine,C7H9N,107.0735,108.0808 (M+H),31.0,HILIC+,HMDB0033871,C15562,Amines
+137,"Aminophenol (2, 3, or 4)",C6H7NO,109.0528,110.0600 (M+H),31.0,HILIC+,HMDB0001169,C02372,Amines
+138,Phenethylamine,C8H11N,121.0892,122.0964 (M+H),31.0,HILIC+,HMDB0012275,C05332,Amines
+139,Cadaverine,C5H14N2,102.1157,103.123 (M+H),76.0,HILIC+,HMDB0002322,C01672,Amines
+140,Quinoline,C9H7N,129.0579,130.0651 (M+H),31.0,HILIC+,HMDB0033731,C06413,Amines
+141,2-Quinolinecarboxylic acid,C10H7NO2,173.0477,174.055 (M+H),31.0,HILIC+,HMDB0000842,C06325,Amines
+142,Salsolinol,C10H13NO2,179.0946,180.1019 (M+H),32.0,HILIC+,HMDB0005199,C09642,Amines
+143,Pyruvate,C3H4O3,88.0161,87.0087 (M-H),20.0,C18-,HMDB0000243,C00186,Organic acids and derivatives
+144,Lactate,C3H6O3,90.0317,89.0244 (M-H),22.0,C18-,HMDB0001311,C00164,Organic acids and derivatives
+145,Acetoacetate,C4H6O3,102.0317,101.0244 (M-H),22.0,C18-,HMDB0000060,C00164,Organic acids and derivatives
+146,2-Ketobutyric acid,C4H6O3,102.0317,101.0244 (M-H),22.0,C18-,HMDB0000005,C00109,Organic acids and derivatives
+147,Citric acid,C6H8O7,192.027,191.0197 (M-H),19.0,C18-,HMDB0000094,C00158,Organic acids and derivatives
+148,Isocitric acid,C6H8O7,192.027,191.0197 (M-H),19.0,C18-,HMDB0000193,C00311,Organic acids and derivatives
+149,(Cis/Trans)-Aconitate,C6H6O6,174.0164,173.0091 (M-H),19.0,C18-,HMDB0000958,C02341,Organic acids and derivatives
+150,alpha-Ketoglutarate (Oxoglutarate),C5H6O5,146.0215,145.0142 (M-H),21.0,C18-,HMDB0000208,C00026,Organic acids and derivatives
+151,Succinic acid,C4H6O4,118.0266,117.0193 (M-H),21.0,C18-,HMDB0000254,C00042,Organic acids and derivatives
+152,Methylmalonic acid,C4H6O4,118.0266,117.0193 (M-H),21.0,C18-,HMDB0000202,C02170,Organic acids and derivatives
+153,Fumaric acid,C4H4O4,116.011,115.0037 (M-H),21.0,C18-,HMDB0000134,C00122,Organic acids and derivatives
+154,Malic acid,C4H6O5,134.0215,133.0143 (M-H),21.0,C18-,HMDB0000156,C00149,Organic acids and derivatives
+155,alpha-OH-butyrate,C4H8O3,104.0474,103.0401 (M-H),23.0,C18-,HMDB0000008,C05984,Organic acids and derivatives
+156,beta-OH butyrate,C4H8O3,104.0474,103.0401 (M-H),23.0,C18-,HMDB0000357,C01089,Organic acids and derivatives
+157,Glyceric acid,C3H6O4,106.0266,105.0193 (M-H),20.0,C18-,HMDB0000139,C00258,Organic acids and derivatives
+158,Oxovaleric acid,C5H8O3,116.0473,115.0401 (M-H),20.0,C18-,HMDB0001865,C06255,Organic acids and derivatives
+159,alpha-Ketoisovalerate (Ketovaline),C5H8O3,116.0473,115.0401 (M-H),20.0,C18-,HMDB0000019,C00141,Organic acids and derivatives
+"[158,159]",Oxovalerate/Ketoisovalerate,C5H8O3,116.0473,115.0401 (M-H),20.0,C18-,-,-,Organic acids and derivatives
+160,alpha-Ketoisocaproate (Ketoleucine),C6H10O3,130.063,129.0557 (M-H),24.0,C18-,HMDB0000695,C00233,Organic acids and derivatives
+161,alpha-Keto-beta-methyl-valerate (Ketoisoleucine),C6H10O3,130.063,129.0557 (M-H),24.0,C18-,HMDB0000491,C03465,Organic acids and derivatives
+"[160,161]",Ketoleucine/Ketoisoleucine,C6H10O3,130.063,129.0557 (M-H),24.0,C18-,-,-,Organic acids and derivatives
+162,Hydroxymethylglutarate,C6H10O5,162.0528,161.0456 (M-H),23.0,C18-,HMDB0000355,C03761,Organic acids and derivatives
+163,Mevalonic acid,C6H12O4,148.0736,147.0663 (M-H),22.0,C18-,HMDB0000227,C00418,Organic acids and derivatives
+164,Sorbate,C6H8O2,112.0524,113.0597 (M+H),30.0,HILIC+,HMDB0029581,-,Organic acids and derivatives
+165,2-Methylmaleate,C5H6O4,130.0266,129.0193 (M-H),22.0,C18-,HMDB0000634,C02226,Organic acids and derivatives
+166,Glutaric acid,C5H8O4,132.0423,131.0350 (M-H),25.0,C18-,HMDB0000661,C00489,Organic acids and derivatives
+167,Ethylmalonic acid,C5H8O4,132.0423,131.0350 (M-H),21.0,C18-,HMDB0000622,-,Organic acids and derivatives
+168,Adipate,C6H10O4,146.0579,145.0506 (M-H),25.0,C18-,HMDB0000448,C06104,Organic acids and derivatives
+169,Oxoadipic acid,C6H8O5,160.0372,159.0299 (M-H),21.0,C18-,HMDB0000225,C00322,Organic acids and derivatives
+171,Dehydroshikimate,C7H8O5,172.0372,171.0299 (M-H),20.0,C18-,-,C02652,Organic acids and derivatives
+172,Shikimic acid,C7H10O5,174.0528,173.0456 (M-H),18.0,C18-,HMDB0003070,C00493,Organic acids and derivatives
+173,Suberate,C8H14O4,174.0892,173.0819 (M-H),25.0,C18-,HMDB0000893,C08278,Organic acids and derivatives
+174,Azelaic acid,C9H16O4,188.1049,187.0976 (M-H),25.0,C18-,HMDB0000784,C08261,Organic acids and derivatives
+175,Benzoate,C7H6O2,122.0368,121.0295 (M-H),23.0,C18-,HMDB0001870,C00180,Organic acids and derivatives
+176,2-Hydroxybenzoate (Salicylic acid),C7H6O3,138.0317,137.0244 (M-H),24.0,C18-,HMDB0001895,C00805,Organic acids and derivatives
+177,3-Hydroxybenzoate,C7H6O3,138.0317,137.0244 (M-H),24.0,C18-,HMDB0002466,C00587,Organic acids and derivatives
+178,4-Hydroxybenzoate,C7H6O3,138.0317,137.0244 (M-H),24.0,C18-,HMDB0000500,C00156,Organic acids and derivatives
+[176-178],Hydroxybenzoate,C7H6O3,138.0317,137.0244 (M-H),24.0,C18-,-,-,Organic acids and derivatives
+179,"2,4-Dihydroxybenzoate",C7H6O4,154.0266,153.0193 (M-H),24.0,C18-,HMDB0029666,C00230,Organic acids and derivatives
+180,"3,5-Dihydroxybenzoate",C7H6O4,154.0266,153.0193 (M-H),24.0,C18-,HMDB0013677,-,Organic acids and derivatives
+181,"2,6-Dihydroxybenzoate",C7H6O4,154.0266,153.0193 (M-H),24.0,C18-,HMDB0013676,-,Organic acids and derivatives
+182,"2,3-Dihydroxybenzoate (2-pyrocatechuate)",C7H6O4,154.0266,153.0193 (M-H),24.0,C18-,HMDB0000397,C00196,Organic acids and derivatives
+183,"3,4-Dihydroxybenzoate (Protocatechuic acid)",C7H6O4,154.0266,153.0193 (M-H),24.0,C18-,HMDB0001856,C00230,Organic acids and derivatives
+184,"2,5-Dihydroxybenzoate (Gentisic acid)",C7H6O4,154.0266,153.0193 (M-H),24.0,C18-,HMDB0000152,C00628,Organic acids and derivatives
+[179-184],Dihydroxybenzoate,C7H6O4,154.0266,153.0193 (M-H),24.0,C18-,-,-,Organic acids and derivatives
+185,2-Phenylacetate,C8H8O2,136.0524,135.0452 (M-H),26.0,C18-,HMDB0000209,C07086,Organic acids and derivatives
+186,Mandelic acid,C8H8O3,152.0474,151.0401 (M-H),24.0,C18-,HMDB0000703,C01984,Organic acids and derivatives
+187,2-Methoxybenzoic acid,C8H8O3,152.0474,151.0401 (M-H),24.0,C18-,HMDB0032604,-,Organic acids and derivatives
+188,3-Methoxybenzoic acid,C8H8O3,152.0474,151.0401 (M-H),24.0,C18-,HMDB0032606,-,Organic acids and derivatives
+189,p-Hydroxyphenylacetic acid,C8H8O3,152.0474,151.0401 (M-H),24.0,C18-,HMDB0000020,C00642,Organic acids and derivatives
+190,o-Hydroxyphenylacetic acid,C8H8O3,152.0474,151.0401 (M-H),24.0,C18-,HMDB0000669,C05852,Organic acids and derivatives
+191,m-Hydroxyphenylacetic acid,C8H8O3,152.0474,151.0401 (M-H),25.0,C18-,HMDB0000440,C05593,Organic acids and derivatives
+192,Vanillin,C8H8O3,152.0474,151.0401 (M-H),25.0,C18-,HMDB0012308,C00755,Organic acids and derivatives
+[186-192],Hydroxyphenylacetate/Methoxybenzoate,C8H8O3,152.0474,151.0401 (M-H),25.0,C18-,-,-,Organic acids and derivatives
+193,Resorscinol monoacetate,C8H8O3,152.0474,153.0546 (M+H),30.0,HILIC+,-,C12064,Organic acids and derivatives
+194,Methylparaben,C8H8O3,153.0474,153.0546 (M+H),31.0,HILIC+,HMDB0032572,-,Organic acids and derivatives
+195,Dihydroxyacetophenone,C8H8O3,154.0474,153.0546 (M+H),32.0,HILIC+,-,-,Organic acids and derivatives
+197,Methylvanillate,C9H10O4,182.0579,183.0652 (M+H),30.0,HILIC+,HMDB0240266,-,Organic acids and derivatives
+198,m-Hydroxymandelic acid,C8H8O4,168.0423,167.0350 (M-H),25.0,C18-,HMDB0000750,-,Organic acids and derivatives
+199,p-Hydroxymandelic acid,C8H8O4,168.0423,167.0350 (M-H),25.0,C18-,HMDB0000822,C11527,Organic acids and derivatives
+200,Homogentisate,C8H8O4,168.0423,167.0350 (M-H),25.0,C18-,HMDB0000130,C00544,Organic acids and derivatives
+201,Cinnamic acid,C9H8O2,148.0524,147.0448 (M-H),30.0,C18-,HMDB0000567,C10438,Organic acids and derivatives
+202,Coumarate,C9H8O3,164.0474,163.0401 (M-H),25.0,C18-,HMDB0002035,C00811,Organic acids and derivatives
+203,Caffeic acid,C9H8O4,180.0423,181.0495 (M-H),31.0,C18-,HMDB0001964,C01481,Organic acids and derivatives
+204,4-Ethylbenzoic acid,C9H10O2,150.0681,149.0608 (M-H),36.0,C18-,HMDB0002097,C00156,Organic acids and derivatives
+205,Hydrocinnamic acid,C9H10O2,150.0681,149.0608 (M-H),36.0,C18-,HMDB0000764,C05629,Organic acids and derivatives
+206,2-Phenylpropionate,C9H10O2,150.0681,149.0608 (M-H),36.0,C18-,HMDB0011743,-,Organic acids and derivatives
+207,Hydroxyphenyllactate,C9H10O4,182.0579,181.0506 (M-H),23.0,C18-,HMDB0000755,C03672,Organic acids and derivatives
+208,Homovanillate,C9H10O4,182.0579,181.0506 (M-H),23.0,C18-,HMDB0000118,C05582,Organic acids and derivatives
+209,"3,4-Dihydroxyphenylpropionic acid (DHPP)",C9H10O4,182.0579,181.0506 (M-H),23.0,C18-,HMDB0000423,C10447,Organic acids and derivatives
+[207-209],Hydroxyphenyllactate/Homovanillate/DHPP,C9H10O4,182.0579,181.0506 (M-H),23.0,C18-,-,-,Organic acids and derivatives
+210,Hydroxyphenylpropionate,C9H10O3,166.063,165.0558 (M-H),25.0,C18-,-,-,Organic acids and derivatives
+211,Vanillylmandelate,C9H10O5,198.0528,197.0456 (M-H),24.0,C18-,HMDB0000291,C05584,Organic acids and derivatives
+212,Quinic acid,C7H12O6,192.0634,191.0561 (M-H),22.0,C18-,HMDB0003072,C06746,Organic acids and derivatives
+213,Ferulic acid,C10H10O4,194.0579,195.0652 (M-H),30.0,C18-,HMDB0000954,C01494,Organic acids and derivatives
+214,Tartaric acid,C4H6O6,150.0164,151.0237 (M+2Na-H),73.0,HILIC+,HMDB0000956,C00898,Organic acids and derivatives
+215,Picolinate (2-Pyridinecarboxylate),CH5NO2,123.02,124.0393 (M+H),41.0,HILIC+,HMDB0002243,C10164,Organic acids and derivatives
+216,Hydroxypyridine,C5H5NO,95.0371,96.0444 (M+H),43.0,HILIC+,HMDB0013751,C02502,Organic acids and derivatives
+217,Orotate,C5H6N2O5,156.0171,200.9883 (M+2Na-H),60.0,HILIC+,HMDB0000226,C00295,Organic acids and derivatives
+218,Dihydroorotate,C5H6N2O4,158.0328,159.0406 (M+H),144.0,HILIC+,HMDB0000528,C00337,Organic acids and derivatives
+219,Quinolinate,C7H5NO4,167.0219,166.0146 (M-H),22.0,C18-,HMDB0000232,C03722,Organic acids and derivatives
+220,Salicylamide,C7H7NO2,137.0477,138.0550 (M+H),30.0,HILIC+,HMDB0015687,D01811,Organic acids and derivatives
+221,4-Aminobenzoate,C7H7NO2,137.0477,138.0550 (M+H),30.0,HILIC+,HMDB0001392,C00568,Organic acids and derivatives
+222,Anthranilate,C7H7NO2,137.0477,138.0550 (M+H),30.0,HILIC+,HMDB0001123,C00108,Organic acids and derivatives
+223,Aminohydroxybenzoate/Hydroxyanthranilate,C7H7NO3,153.0426,154.0504 (M+H),32.0,HILIC+,-,-,Organic acids and derivatives
+224,Hippurate,C9H9NO3,179.0582,180.0655 (M+H),31.0,HILIC+,HMDB0000714,C01586,Organic acids and derivatives
+225,2-Methylhippurate,C10H11NO3,193.0739,194.0812 (M+H),30.0,HILIC+,HMDB0011723,-,Organic acids and derivatives
+226,3-Methylhippurate,C10H11NO3,193.0739,194.0812 (M+H),30.0,HILIC+,HMDB0013245,-,Organic acids and derivatives
+227,4-Methylhippurate,C10H11NO3,193.0739,194.0812 (M+H),30.0,HILIC+,HMDB0013292,-,Organic acids and derivatives
+[225-227],O-Methylhippurate,C10H11NO3,193.0739,194.0812 (M+H),30.0,HILIC+,HMDB0000859,-,Organic acids and derivatives
+228,Methylhippurate,C10H11NO3,193.0739,194.0812 (M+H),30.0,HILIC+,-,-,Organic acids and derivatives
+229,Indoxyl sulfate,C8H7NO4S,213.0096,214.0169 (M+H),42.0,HILIC+,HMDB0000682,-,Organic acids and derivatives
+230,Ethanolamine Phosphate,C2H8NO4P,141.0191,142.0264 (M+H),125.0,HILIC+,HMDB0000224,C00346,Organic acids and derivatives
+231,Phosphoserine,C3H8NO6P,185.0089,186.0162 (M+H),280.0,HILIC+,HMDB0000272,C01005,Organic acids and derivatives
+232,Phosphoenolpyruvate,C3H5O6P,167.9824,166.9751 (M-H),18.0,C18-,HMDB0000263,C00074,Organic acids and derivatives
+233,2-Phosphoglycerate,C3H7O7P,185.9929,184.9856 (M-H),24.0,C18-,HMDB0000362,-,Organic acids and derivatives
+234,3-Phosphoglycerate,C3H7O7P,185.9929,184.9856 (M-H),24.0,C18-,HMDB0000807,C00597,Organic acids and derivatives
+"[233,234]",Phosphoglycerate,C3H7O7P,185.9929,184.9856 (M-H),24.0,C18-,-,-,Organic acids and derivatives
+235,Glucuronic acid,C6H10O8,194.0426,239.0138 (M+2Na-H),75.0,HILIC+,HMDB0000127,C00191,Organic acids and derivatives
+236,Gluconic acid,C6H12O7,196.0583,195.051 (M-H),20.0,C18-,HMDB0000625,C00257,Organic acids and derivatives
+237,Saccharic acid,C6H10O8,210.0376,209.0303 (M-H),20.0,C18-,HMDB0000663,C00818,Organic acids and derivatives
+238,Galactarate,C6H10O8,210.0376,209.0303 (M-H),19.0,C18-,HMDB0000639,C00879,Organic acids and derivatives
+"[237,238]",Tetrahydroxyhexanedioic acid (Saccharate/Galactarate),C6H10O8,210.0376,209.0303 (M-H),20.0,C18-,-,-,Organic acids and derivatives
+239,Rosamarinic acid,C18H16O8,360.0845,359.0772 (M-H),22.0,C18-,HMDB0003572,C10489,Organic acids and derivatives
+240,Pyrrole carboxylate,C5H5NO2,111.032,110.0247 (M-H),20.0,C18-,HMDB0004230,C05942,Organic acids and derivatives
+241,Mercaptopyruvate,C3H4O3S,119.9881,118.9808 (M-H),20.0,C18-,HMDB0001368,C00957,Organic acids and derivatives
+242,Erythritol,C4H10O4,122.0579,157.0273 (M+Cl),22.0,C18-,HMDB0002994,C00503,Carbohydrates
+243,Threitol,C4H10O4,122.0579,157.0273 (M+Cl),22.0,C18-,HMDB0004136,C16884,Carbohydrates
+"[242,243]",Erythritol/Threitol,C4H10O4,122.0579,157.0273 (M+Cl),22.0,C18-,-,-,Carbohydrates
+244,2-Deoxyglucose,C6H12O5,164.0685,199.0379 (M+Cl),22.0,C18-,HMDB0062477,C00586,Carbohydrates
+245,Glucosamine,C6H13NO5,179.0794,180.0867 (M+H),89.0,HILIC+,HMDB0001514,C00329,Carbohydrates
+246,Fructosamine,C6H13NO5,179.0794,180.0867 (M+H),89.0,HILIC+,HMDB0002030,-,Carbohydrates
+247,Glucosamine 6-sulfate,C8H15NO9S,259.0362,260.0435 (M+H),110.0,HilIC+,HMDB0000592,C04132,Carbohydrates
+248,Glucosamine 6-phosphate,C6H14NO8P,259.0457,260.0530 (M+H),275.0,HILIC+,HMDB0001254,C00352,Carbohydrates
+249,Methyl beta galactoside,C7H14O6,194.079,217.0683 (M+Na),46.0,HILIC+,HMDB0029965,C03619,Carbohydrates
+250,Glucosaminate,C6H13NO6,195.0743,196.0812 (M+H),126.0,HILIC+,-,C03752,Carbohydrates
+251,2-Acetamido-2-Deoxy-Beta-D-Glucosylamine,C8H16N2O5,220.1059,221.1132 (M+H),81.0,HILIC+,-,-,Carbohydrates
+252,Arabinose,C5H10O5,150.0528,149.0455 (M-H),22.0,C18-,HMDB0000646,C00259,Carbohydrates
+253,Xylose,C5H10O5,150.0528,149.0455 (M-H),22.0,C18-,HMDB0000098,C00181,Carbohydrates
+254,Ribose,C5H10O5,150.0528,149.0455 (M-H),22.0,C18-,HMDB0000283,C00121,Carbohydrates
+255,Ribose 5-phosphate,C5H11O8P,230.0192,231.0264 (M+H),150.0,HILIC+,HMDB0001548,C00117,Carbohydrates
+256,Fructose,C6H12O6,180.0634,219.0265 (M+K),60.0,HILIC+,HMDB0000660,C02336,Carbohydrates
+257,Mannose,C6H12O6,180.0634,203.0526 (M+Na),60.0,HILIC+,HMDB0000169,C00159,Carbohydrates
+258,Galactose,C6H12O6,180.0634,203.0526 (M+Na),60.0,HILIC+,HMDB0000143,C00984,Carbohydrates
+259,Glucose,C6H12O6,180.0634,215.0328 (M+Cl),22.0,C18-,HMDB0000122,C00031,Carbohydrates
+260,Hexane hexol (Mannitol/Sorbitol),C6H14O7,182.079,205.0683 (M+Na),60.0,HILIC+,-,-,Carbohydrates
+261,Galactose 1-phosphate,C6H13O9P,260.0297,261.0370 (M+H),264.0,HILIC+,HMDB0000645,C00446,Carbohydrates
+262,Glucose 6-phosphate,C6H13O9P,260.0297,261.0370 (M+H),278.0,HILIC+,HMDB0001401,C00668,Carbohydrates
+263,Fructose 6-phosphate,C6H13O9P,260.0297,261.0370 (M+H),280.0,HILIC+,HMDB0000124,C00085,Carbohydrates
+[261-263],"Hexose (Glucose, others) phosphate (1 or 6)",C6H13O9P,260.0297,261.0370 (M+H),269.0,HILIC+,-,-,Carbohydrates
+264,N-Acetylglucosamine,C8H15NO6,221.0899,258.0385 (M+Cl),23.0,C18-,HMDB0000215,C01074,Carbohydrates
+265,N-Acetylneuraminate,C11H19NO9,309.106,308.0987 (M-H),20.0,C18-,HMDB0000230,C00140,Carbohydrates
+266,Disaccharide (Lactose),C12H22O11,342.1162,365.1054 (M+Na),78.0,HILIC+,HMDB0000186,C00243,Carbohydrates
+267,Trehalose,C12H22O11,342.1162,365.1065 (M+Na),100.0,HILIC+,HMDB0000975,C01083,Carbohydrates
+268,Trisaccharide (Raffinose),C18H32O16,504.169,527.1583 (M+Na),138.0,HILIC+,HMDB0003213,C00492,Carbohydrates
+269,"Tetrasaccharide (Glycogen, Stachyose)",C24H42O21,666.2219,689.2111 (M+Na),250.0,HILIC+,HMDB0000757,C00182,Carbohydrates
+270,Aminoethylphosphonate,C2H8NO3P,125.0242,126.0513 (M+H),150.0,HILIC+,HMDB0011747,C03557,Carbohydrates
+271,Aminoethyldihydrogenphosphate,C2H8NO4P,141.0191,142.0264 (M+H),120.0,HILIC+,-,-,Carbohydrates
+272,Choline,C5H14NO,103.0997,104.1070 (M+H),40.0,HILIC+,HMDB0000097,C00114,"Cholines, Betaines, Carnitines, CoAs"
+273,Acetylcholine,C7H16NO2,145.1103,146.1176 (M+H),32.0,HILIC+,HMDB0000895,C01996,"Cholines, Betaines, Carnitines, CoAs"
+274,Phosphocholine,C5H14NO4P,183.066,184.0733 (M+H),160.0,HILIC+,HMDB0001565,C00588,"Cholines, Betaines, Carnitines, CoAs"
+275,Glycerophosphocholine,C8H20NO6P,257.1028,258.1101 (M+H),104.0,HILIC+,HMDB0000086,C00670,"Cholines, Betaines, Carnitines, CoAs"
+276,LysoPC(14:0),C22H47NO7P,467.3012,468.3085 (M+H),42.0,HILIC+,HMDB0010379,-,"Cholines, Betaines, Carnitines, CoAs"
+277,LysoPC(O/P-16:1),C24H50NO6P,479.3376,480.3449 (M+H),39.0,HILIC+,-,-,"Cholines, Betaines, Carnitines, CoAs"
+278,LysoPE(18:0),C23H48NO7P,481.3168,482.3241 (M+H),39.0,HILIC+,-,-,"Cholines, Betaines, Carnitines, CoAs"
+279,LysoPC(16:0),C24H50NO7P,495.3325,496.3398 (M+H),40.0,HILIC+,HMDB0010382,-,"Cholines, Betaines, Carnitines, CoAs"
+280,LysoPE(20:3),C25H46NO7P,503.3012,504.3085 (M+H),40.0,HILIC+,-,-,"Cholines, Betaines, Carnitines, CoAs"
+281,LysoPE(20:1),C25H50NO7P,507.3325,508.3398 (M+H),42.0,HILIC+,HMDB0011482,-,"Cholines, Betaines, Carnitines, CoAs"
+282,LysoPC(18:1),C26H55NO7P,521.3487,522.3560 (M+H),40.0,HILIC+,HMDB0002815,-,"Cholines, Betaines, Carnitines, CoAs"
+283,LysoPC(18:0),C26H54NO7P,523.3638,524.3711 (M+H),40.0,HILIC+,HMDB0011128,-,"Cholines, Betaines, Carnitines, CoAs"
+284,PC(10:0/10:0),C28H56NO8P,565.3744,566.3816 (M+H),38.0,HILIC+,-,CA1375,"Cholines, Betaines, Carnitines, CoAs"
+285,Betaine,C5H11NO2,117.079,118.0863 (M+H),64.0,HILIC+,HMDB0000043,C00719,"Cholines, Betaines, Carnitines, CoAs"
+286,Butyrobetaine,C7H15NO2,145.1103,146.1176 (M+H),66.0,HILIC+,HMDB0001161,C01181,"Cholines, Betaines, Carnitines, CoAs"
+287,Valerobetaine,C8H17NO2,159.1269,160.1332 (M+H),42.0,HILIC+,-,-,"Cholines, Betaines, Carnitines, CoAs"
+288,Valine Betaine,C8H17NO2,159.1259,160.1332 (M+H),42.0,HILIC+,-,-,"Cholines, Betaines, Carnitines, CoAs"
+289,Carnitine,C7H15NO3,161.1052,162.1125 (M+H),73.0,HILIC+,HMDB0000062,C00318,"Cholines, Betaines, Carnitines, CoAs"
+290,Acetylcarnitine,C9H17NO4,203.1158,204.123 (M+H),55.0,HILIC+,HMDB0000201,C02571,"Cholines, Betaines, Carnitines, CoAs"
+291,Propionylcarnitine,C10H19NO4,217.1314,218.1387 (M+H),48.0,HILIC+,HMDB0000824,C03017,"Cholines, Betaines, Carnitines, CoAs"
+292,Butyrylcarnitine,C11H21NO4,231.1471,232.1543 (M+H),45.0,HILIC+,HMDB0002013,C02862,"Cholines, Betaines, Carnitines, CoAs"
+293,Hexanoylcarnitine,C13H25NO4,259.1784,260.1857 (M+H),42.0,HILIC+,HMDB0000705,-,"Cholines, Betaines, Carnitines, CoAs"
+294,Octanoylcarnitine,C15H29NO4,287.2097,288.2170 (M+H),39.0,HILIC+,HMDB0000791,C02838,"Cholines, Betaines, Carnitines, CoAs"
+295,Decanoylcarnitine,C17H33NO4,315.241,316.2483 (M+H),39.0,HILIC+,HMDB0000651,-,"Cholines, Betaines, Carnitines, CoAs"
+296,Lauroylcarnitine,C19H37NO4,343.2722,344.2795 (M+H),27.0,HILIC+,HMDB0002250,-,"Cholines, Betaines, Carnitines, CoAs"
+297,Palmitoylcarnitine,C23H45NO4,399.3349,400.3421 (M+H),36.0,HILIC+,HMDB0000222,C02990,"Cholines, Betaines, Carnitines, CoAs"
+298,CoA,C21H36N7O16P3S,767.1152,382.5507 (M-2H),30.0,C18-,HMDB0001423,C00010,"Cholines, Betaines, Carnitines, CoAs"
+299,Acetyl-CoA,C23H38N7O17P3S,809.1258,403.5556 (M-2H),32.0,C18-,HMDB0001206,C00024,"Cholines, Betaines, Carnitines, CoAs"
+300,Propionyl-CoA,C24H40N7O17P3S,823.1414,410.5634 (M-2H),32.0,C18-,HMDB0001275,C00100,"Cholines, Betaines, Carnitines, CoAs"
+301,C4-CoA,C25H42N7O17P3S,837.1571,417.5713 (M-2H),32.0,C18-,HMDB0001088,C00136,"Cholines, Betaines, Carnitines, CoAs"
+302,C5:1-CoA,C26H42N7O17P3S,849.157,423.5713 (M-2H),32.0,C18-,HMDB0001493,C03069,"Cholines, Betaines, Carnitines, CoAs"
+303,C5-CoA,C26H44N7O17P3S,851.1727,424.5791 (M-2H),35.0,C18-,HMDB0001113,C02939,"Cholines, Betaines, Carnitines, CoAs"
+304,Hexanoyl-CoA,C27H46N7O17P3S,865.1884,431.5869 (M-2H),35.0,C18-,HMDB0002845,C05270,"Cholines, Betaines, Carnitines, CoAs"
+305,Octanoyl-CoA,C29H50N7O17P3S,893.2197,445.0260 (M-2H),35.0,C18-,HMDB0001070,C01944,"Cholines, Betaines, Carnitines, CoAs"
+306,Decanoyl-CoA,C31H54N7O17P3S,921.251,459.6182 (M-2H),35.0,C18-,HMDB0006404,C05274,"Cholines, Betaines, Carnitines, CoAs"
+307,Myristoyl-CoA,C35H62N7O17P3S,977.3136,489.6641 (M-2H),36.0,C18-,HMDB0001521,C02593,"Cholines, Betaines, Carnitines, CoAs"
+308,Palmitoyl-CoA,C37H66N7O17P3S,1005.3449,501.6652 (M-2H),45.0,C18-,HMDB0001338,C00154,"Cholines, Betaines, Carnitines, CoAs"
+309,Vitamin A (Retinol),C20H30O,286.2297,269.2269 (M-H2O+H),26.0,HILIC+,HMDB0000305,C00473,Vitamins and Cofactors
+310,Retinoic acid,C20H28O2,300.2089,299.2017 (M-H),226.0,C18-,HMDB0001852,C00777,Vitamins and Cofactors
+311,Thiamine (B1),C12H17N4OS,264.1045,265.1118 (M+H),60.0,HILIC+,HMDB0000235,C00378,Vitamins and Cofactors
+312,Thiamine Pyrophosphate,C12H18N4O7P2S,424.0371,425.0444 (M+H),294.0,HILIC+,HMDB0001372,C00068,Vitamins and Cofactors
+313,Riboflavin (B2),C17H20N4O6,376.1383,377.1456 (M+H),45.0,HILIC+,HMDB0000244,C00255,Vitamins and Cofactors
+314,Nicotinate (B3),C6H5NO2,123.032,124.0393 (M+H),35.0,HILIC+,HMDB0001488,C00253,Vitamins and Cofactors
+315,Nicotinamide (B3),C6H6N2O,122.048,123.0553 (M+H),37.0,HILIC+,HMDB0001406,C00153,Vitamins and Cofactors
+316,Pantothenic acid (B5),C9H17NO5,219.1107,220.1179 (M+H),36.0,HILIC+,HMDB0000210,C00864,Vitamins and Cofactors
+317,Pyridoxine (B6),C8H11NO3,169.0739,170.0812 (M+H),52.0,HILIC+,HMDB0000239,C00314,Vitamins and Cofactors
+318,Pyridoxal (B6),C8H9NO3,167.0582,168.0655 (M+H),39.0,HILIC+,HMDB0001545,C00250,Vitamins and Cofactors
+319,Biotin (B7),C10H16N2O3S,244.0882,245.0954 (M+H,35.4,HILIC+,HMDB0000030,C00120,Vitamins and Cofactors
+320,Folate (B9),C19H19N7O6,441.1397,442.1470 (M+H),48.0,HILIC+,HMDB0000121,C00504,Vitamins and Cofactors
+321,Dihydrofolate,C19H21N7O6,443.1553,444.1631 (M+H),62.0,HILIC+,HMDB0001056,C00415,Vitamins and Cofactors
+324,Vitamin B12,C63H88CoN14O14P,1354.5674,678.2895 (M+2H),120.0,HILIC+,HMDB0000607,C05776,Vitamins and Cofactors
+325,Methylcobalamin,C63H92CoN13O14P,1344.5956,673.3021 (M+H),96.0,HILIC+,HMDB0002274,C06453,Vitamins and Cofactors
+326,Adenosylcobalamin,C72H100CoN18O17P,1578.6583,527.2267 (M+3H),156.0,HILIC+,HMDB0002086,C00194,Vitamins and Cofactors
+327,Vitamin C (Ascorbate),C6H8O6,176.0321,175.024814 (M-H),20.0,HILIC+,HMDB0000044,C00072,Vitamins and Cofactors
+328,Vitamin D2,C28H44O,396.3392,397.3465 (M+H),27.0,HILIC+,HMDB0000900,C05441,Vitamins and Cofactors
+329,Alpha-Tocopherol,C29H50O2,430.381,431.3883 (M+H),27.0,HILIC+,HMDB0001893,C00473,Vitamins and Cofactors
+330,Dihydrofolate,C19H21N7O6,443.1553,444.1631 (M+H),72.0,HILIC+,HMDB0001056,C00415,Vitamins and Cofactors
+331,Flavin mononucleotide,C17H21N4O9P,456.1046,457.1119 (M+H),110.0,HILIC+,HMDB0001520,C00061,Vitamins and Cofactors
+332,1-Methylnicotinamide,C7H8N2O,136.0637,137.0709 (M+H),50.0,HILIC+,HMDB0000699,C02918,Vitamins and Cofactors
+333,Trigonelline,C7H7NO2,137.0477,138.055 (M+H),68.0,HILIC+,HMDB0000875,C01004,Vitamins and Cofactors
+334,Flavin adenine dinucleotide (FAD),C27H33N9O15P2,785.1571,786.1644 (M+H),15.0,HILIC+,HMDB0001248,C00016,Vitamins and Cofactors
+335,Nicotinamide mononucleotide,C11H15N2O8P,334.0566,335.0639 (M+H),133.0,HILIC+,HMDB0000229,C00455,Vitamins and Cofactors
+336,NAD+,C21H27N7O14P2,663.1091,332.5618 (M+2H),293.0,HILIC+,HMDB0000902,C00003,Vitamins and Cofactors
+337,NADPH,C21H28N7O17P3,743.0755,372.5450 (M+2H),294.0,HILIC+,HMDB0000221,C00005,Vitamins and Cofactors
+338,Pyridoxate,C8H9NO4,183.0532,184.0609 (M+H),40.0,HILIC+,HMDB0000017,C00847,Vitamins and Cofactors
+339,Pyridoxamine,C8H12N2O2,168.0899,169.0972 (M+H),75.0,HILIC+,HMDB0001431,C00534,Vitamins and Cofactors
+340,Menatetrenone - Vitamin MK4,C31H40O2,444.3028,445.3101 (M+H),27.0,HILIC+,HMDB0030017,-,Vitamins and Cofactors
+341,Hydroxynicotinate,C6H5NO3,139.0269,140.0342 (M+H),40.0,HILIC+,HMDB0002658,C01020,Vitamins and Cofactors
+342,Lumichrome,C12H10N4O2,242.0804,243.0877 (M+H),29.0,HILIC+,-,C01727,Vitamins and Cofactors
+343,FA 4:0 (Butyrate/Isobutyrate),C4H8O2,88.0524,87.0451 (M-H),20.0,C18-,-,-,Lipids
+344,"FA 5:0 (Valerate, Isovalerate, others)",C5H10O2,102.0681,101.0608 (M-H),20.0,C18-,-,-,Lipids
+345,"FA 6:0 (Caproate, Isocaproate, others)",C6H12O2,116.0837,115.0765 (M-H),22.0,C18-,-,-,Lipids
+346,FA 7:0,C7H14O2,130.0994,129.0921 (M-H),44.0,C18-,HMDB0000666,-,Lipids
+347,FA 8:0 (Octanoate),C8H16O2,144.115,143.1078 (M-H),77.0,C18-,HMDB0000482,-,Lipids
+348,FA 9:0,C9H18O2,158.1307,157.1234 (M-H),100.0,C18-,HMDB0000847,-,Lipids
+349,OH-FA10:0,C10H20O3,188.1413,187.134 (M-H),38.0,C18-,-,-,Lipids
+350,FA 12:0 (Laurate),C12H24O2,200.1776,199.1704 (M-H),180.0,C18-,HMDB0000638,-,Lipids
+351,OH-FA12:0,C12H24O3,216.1726,215.1653 (M-H),59.0,C18-,HMDB0002059,-,Lipids
+352,FA 14:0 (Myristate),C14H28O2,228.2089,227.2017 (M-H),220.0,C18-,HMDB0000806,-,Lipids
+353,FA 16:1 (Palmitoleic),C16H30O2,254.2246,253.2173 (M-H),228.0,C18-,HMDB0003229,-,Lipids
+354,FA 16:0 (Palmitate),C16H32O2,256.2402,255.233 (M-H),252.0,C18-,HMDB0000220,-,Lipids
+355,FA 17:0,C17H34O2,270.2559,269.2486 (M-H),266.0,C18-,HMDB0002259,-,Lipids
+356,FA 18:3 n-3 or n-6 (Linolenic acid),C18H30O2,278.2246,277.2173 (M-H),223.0,C18-,-,-,Lipids
+357,FA 18:2 (Linoleic acid),C18H32O2,280.2402,279.233 (M-H),238.0,C18-,HMDB0000673,C01595,Lipids
+358,FA 18:1 (Oleic acid),C18H34O2,282.2559,281.2486 (M-H),258.0,C18-,HMDB0000207,C00712,Lipids
+359,FA 18:0 (Stearic acid),C18H36O2,284.2715,283.2643 (M-H),282.0,C18-,HMDB0000827,C01530,Lipids
+360,FA 20:0 (Arachidic acid),C20H40O2,312.3028,311.2955 (M-H),298.0,C18-,HMDB0002212,C06425,Lipids
+361,FA 20:1 (Gondoic acid),C20H38O2,310.2872,309.2799 (M-H),290.0,C18-,HMDB0002231,C16526,Lipids
+362,FA 20:2 (Eicosadienoic acid),C20H36O2,308.2715,307.2642 (M-H),272.0,C18-,HMDB0005060,C16525,Lipids
+363,FA 20:3 (Homolinoleic acid),C20H34O2,306.2559,305.2486 (M-H),252.0,C18-,HMDB0060039,-,Lipids
+364,FA 20:4 (Arachidonic acid),C20H32O2,304.2402,303.2329 (M-H),239.0,C18-,HMDB0001043,C00219,Lipids
+365,FA 20:5 (Eicosapentaenoic acid),C20H30O2,302.2246,301.2173 (M-H),224.0,C18-,HMDB0001999,C06428,Lipids
+366,FA 22:4 (Docosatetraenoic acid),C22H36O2,332.2715,331.2642 (M-H),258.0,C18-,HMDB0002226,C16527,Lipids
+367,FA 22:5 n-3 or n-5,C22H34O2,330.2559,329.2486 (M-H),240.0,C18-,HMDB0039133,-,Lipids
+368,Docosahexaenoic acid (FA 22:6),C22H32O2,328.2402,327.233 (M-H),227.0,C18-,HMDB0002183,C06429,Lipids
+369,Sphinganine,C18H39NO2,301.2981,302.3054 (M+H),26.0,HILIC+,HMDB0000269,C00836,Lipids
+370,Sphingosine,C18H37NO2,299.2824,300.2897 (M+H),28.0,HILIC+,HMDB0000252,C00319,Lipids
+371,MG(14:0/0:0/0:0),C17H34O4,302.2457,361.2596 (M+CH3COO),226.0,C18-,HMDB0011561,-,Lipids
+372,MG(18:1/0:0/0:0),C21H40O4,356.2927,391.2621 (M+CH3COO),251.0,C18-,HMDB0011567,-,Lipids
+373,TG(50:3),C53H96O6,828.7197,829.727 (M+H),30.0,HILIC+,-,-,Lipids
+374,DG(34:1),C37H70O5,594.5223,566.55 (M+H),30.0,HILIC+,-,-,Lipids
+375,Cer(d18:1/16:0),C34H67NO3,537.5121,538.5194 (M+H),26.0,HILIC+,-,-,Lipids
+376,Methyl jasmonate,C13H20O3,224.1413,225.1485 (M+H),28.0,HILIC+,HMDB0036583,-,Lipids
+377,Cholesterol,C27H46O,386.3549,369.352 (M-H2O+H),27.0,HILIC+,HMDB0000067,C00187,Lipids
+378,Lanosterol,C30H50O,426.3862,408.3834 (M-H2O+H),30.0,HILIC+,HMDB0001251,C01724,Lipids
+379,25-hydroxycholesterol,C27H46O2,402.3498,385.3470 (M-H2O+H),27.0,HILIC+,HMDB0006247,C15519,Lipids
+380,17/21-hydroxyprogesterone,C21H30O3,330.2195,331.2268 (M+H),30.0,HILIC+,-,-,Lipids
+381,Progesterone,C21H30O2,314.2246,315.2319 (M+H),27.0,HILIC+,HMDB0001830,C00410,Lipids
+382,Cortisol-21-acetate,C23H32O6,404.2199,405.2272 (M+H),28.0,HILIC+,-,C02821,Lipids
+383,11-deoxycortisol,C21H30O4,346.2144,345.2071 (M-H),98.0,C18-,HMDB0000015,C05488,Lipids
+384,Cortexolone,C21H30O4,346.2144,347.2217 (M+H),29.1,HILIC+,-,-,Lipids
+385,Cortisol,C21H30O5,362.2093,363.2166 (M+H),30.0,HILIC+,HMDB0000063,C00735,Lipids
+386,Tetrahydrocortisol,C21H34O5,366.2406,349.2379 (M-H2O+H),30.0,HILIC+,HMDB0000949,C05472,Lipids
+387,Estriol,C18H24O3,357.0295,358.0368 (M+H),27.0,HILIC+,HMDB0000153,-,Lipids
+388,Aldosterone,C21H28O5,360.1937,361.2010 (M+H),27.0,HILIC+,HMDB0000037,-,Lipids
+389,Adrenosterone,C19H24O3,270.1623,271.1696 (M+H),27.0,HILIC+,HMDB0006772,-,Lipids
+390,Lithocholic acid,C24H40O3,376.2978,375.2905 (M-H),196.0,C18-,HMDB0000761,C03990,Lipids
+391,Chenodeoxycholate (CDCA),C24H40O4,392.2927,391.2853 (M-H),138.0,C18-,HMDB0000518,C02528,Lipids
+392,Deoxycholate (CDA),C24H40O4,392.2927,391.2853 (M-H),138.0,C18-,HMDB0000626,C04483,Lipids
+393,CDCA/CDA,C24H40O4,392.2927,391.2853 (M-H),138.0,C18-,-,-,Lipids
+"[392,393]",Cholic acid,C24H40O5,408.2876,407.2803 (M-H),90.0,C18-,HMDB0000619,C00695,Lipids
+394,Glycocholate,C26H43NO6,465.309,466.3163 (M+H),38.0,HILIC+,HMDB0000138,C01921,Lipids
+395,Taurolithocholate,C26H45NO5S,483.3018,484.3090 (M+H),42.0,HILIC+,HMDB0000722,C02592,Lipids
+396,Estradiol 17-alpha,C18H24O2,272.1776,271.1704 (M-H),152.0,C18-,HMDB0000429,C02537,Lipids
+397,Urate,C5H4N4O3,168.0283,167.0211 (M-H),21.0,C18-,HMDB0000289,C00366,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+398,Xanthine,C5H4N4O2,152.0334,153.0407 (M+H),45.0,HILIC+,HMDB0000292,C00385,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+399,Hypoxanthine,C5H4N4O,136.0385,137.0463 (M+H),44.0,HILIC+,HMDB0000157,C00262,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+400,Purine,C5H4N4,120.0436,121.0514 (M+H),39.0,HILIC+,HMDB0001366,C15587,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+401,Adenine,C5H5N5,135.0545,136.0618 (M+H),43.0,HILIC+,HMDB0000034,C00147,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+402,Adenosine,C10H13N5O4,267.0968,268.1041 (M+H),44.0,HILIC+,HMDB0000050,C00212,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+403,Methyladenosine,C11H15N5O4,281.1124,282.1197 (M+H),40.0,HILIC+,HMDB0003331,C02494,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+404,Adenosine monophosphate,C10H14N5O7P,347.0631,348.0704 (M+H),148.0,HILIC+,HMDB0000045,C00020,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+405,Deoxyadenosine monophosphate,C10H14N5O6P,331.0682,332.0760 (M+H),122.0,HILIC+,HMDB0000905,C00360,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+406,Adenosine diphosphate,C10H15N5O10P2,427.0294,426.0221 (M-H),36.0,C18-,HMDB0001341,C00008,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+407,Inosine,C10H12N4O5,268.0808,267.0735 (M-H),24.0,C18-,HMDB0000195,C00294,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+408,Inosine monophosphate,C10H13N4O8P,348.0471,349.0549 (M+H),186.0,HILIC+,HMDB0000175,C00130,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+409,Inosine diphosphate,C10H14N4O11P2,428.0134,427.0062 (M-H),20.0,C18-,HMDB0003335,C00104,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+410,Guanine,C5H5N5O,151.0494,152.0567 (M+H),55.0,HILIC+,HMDB0000132,C00242,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+411,Guanosine,C10H13N5O5,283.0917,284.0989 (M+H),50.0,HILIC+,HMDB0000133,C00387,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+412,Deoxyguanosine,C10H13N5O4,267.0968,268.1041 (M+H),50.0,HILIC+,HMDB0000085,C00330,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+414,Guanosine monophosphate,C10H14N5O8P,363.058,364.0653 (M+H),256.0,HILIC+,HMDB0001397,C00144,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+415,Thymidine,C10H14N2O5,242.0903,243.0975 (M+H),37.0,HILIC+,HMDB0000273,C00214,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+416,Cytidine,C9H13N3O5,243.0855,244.0928 (M+H),58.0,HILIC+,HMDB0000089,C00475,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+417,Cytosine,C4H5N3O,111.0433,112.0505 (M+H),50.0,HILIC+,HMDB0000630,C00380,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+418,Deoxycytidine,C9H13N3O4,227.0906,228.0979 (M+H),50.0,HILIC+,-,-,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+419,5-Methylcytosine,C5H7N3O,125.0589,126.0667 (M+H),46.0,HILIC+,HMDB0002894,C02376,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+420,Cytidine monophosphate,C9H14N3O8P,323.0519,324.0591 (M+H),168.0,HILIC+,HMDB0000095,C00055,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+421,Cytidine diphosphocholine,C14H26N4O11P2,488.1073,245.0609 (M+2H),297.0,HILIC+,HMDB0001413,C00307,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+422,2'-Deoxycytidine 5'-monophosphate,C9H14N3O7P,307.0569,308.0642 (M+H),147.0,HILIC+,HMDB0001202,C00239,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+423,Uracil,C4H4N2O2,112.0273,113.0346 (M+H),38.0,HILIC+,HMDB0000300,C00106,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+424,"Dihydrouracil (5, 6)",C4H6N2O2,114.0429,115.0502 (M+H),38.0,HILIC+,HMDB0000076,C00429,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+425,Uridine,C9H12N2O6,244.0695,245.0768 (M+H),43.0,HILIC+,HMDB0000296,C00299,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+426,Deoxyuridine,C9H12N2O5,228.0746,229.0824 (M+H),39.0,HILIC+,-,-,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+427,Uridine-5-Monophosphate,C9H13N2O9P,324.0359,325.0431 (M+H),149.0,HILIC+,HMDB0000288,C00105,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+428,Hydroxymethyluracil,C5H6N2O3,142.0378,143.0451 (M+H),43.0,HILIC+,HMDB0000469,C03088,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+429,Isopentenyladenine,C10H13N5,203.1171,204.1244 (M+H),31.0,HILIC+,-,C04083,"Lipids
+Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
+430,Biliverdin,C33H34N4O6,582.2478,583.2551 (M+H),28.0,HILIC+,HMDB0001008,C00500,Other
+431,Bilirubin,C33H36N4O6,584.2635,585.2708 (M+H),26.0,HILIC+,HMDB0000054,C00486,Other
+432,Protoporphyrin,C34H34N4O4,562.258,563.2653 (M+H),28.0,HILIC+,HMDB0000241,C02191,Other
+433,Caffeine,C8H10N4O2,194.0804,195.0877 (M+H),32.0,HILIC+,HMDB0001847,C07481,Other
+434,Theophyline,C7H8N4O2,180.0647,181.0720 (M+H),35.0,HILIC+,HMDB0001889,C07130,Other
+435,Paraxanthine,C7H8N4O2,180.0647,181.0720 (M+H),36.0,HILIC+,HMDB0001860,C13747,Other
+436,Theobromine,C7H8N4O2,180.0647,181.0720 (M+H),36.0,HILIC+,HMDB0002825,C07480,Other
+437,Dimethylxanthine,C7H8N4O2,180.0647,181.0720 (M+H),36.0,HILIC+,-,-,Other
+438,Nicotine,C10H14N2,162.1157,163.1230 (M+H),37.0,HILIC+,HMDB0001934,C00745,Other
+439,Cotinine,C10H12N2O,176.095,177.1022 (M+H),35.0,HILIC+,HMDB0001046,-,Other
+440,Carboxymethylcysteine,C5H9NO4S,179.0252,180.0325 (M+H),81.0,HILIC+,HMDB0029415,C03727,Other
+441,Allantoin,C4H6N4O3,158.044,159.0513 (M+H),75.0,HILIC+,HMDB0000462,C01551,Other
+442,Daidzein,C15H10O4,254.0582,255.0655 (M+H),27.0,HILIC+,HMDB0003312,C10208,Other
+443,Metribuzin,C8H14N4OS,214.0893,215.0966 (M+H),30.0,HILIC+,-,-,Other
+444,Malathion,C10H19O6PS2,330.0366,331.0439 (M+H),30.0,HILIC+,HMDB0014910,C07497,Other
+445,Benserazide,C10H15N3O5,257.1011,258.1084 (M+H),66.0,HILIC+,-,-,Other
+446,Pirimicarb,C11H18N4O2,238.142,239.1493 (M+H),24.0,HILIC+,-,-,Other
+447,PFOS,C8HF17O3S,499.9375,498.9302 (M-H),120.0,C18-,-,-,Other
+448,PFOA,C8HF15O2,413.9739,412.9666 (M-H),77.0,C18-,-,-,Other
+449,PFHxS,C6HF13O3S,399.9441,398.9368 (M-H),79.0,C18-,-,-,Other
+450,PFNA,C9HF17O2,463.9702,462.9629 (M-H),137.0,C18-,-,-,Other
+451,PFDA,C10HF19O2,513.9671,512.9598 (M-H),159.0,C18-,-,-,Other
+452,Chlorobenzoate,C7H5ClO2,155.9978,154.9905 (M-H),20.0,C18-,-,-,Other
+453,Diisopropylphthalate,C14H18O4,250.1205,251.1278 (M+H),27.0,HILIC+,-,-,Other
+454,Anilinesulfonate,C6H7NO3S,173.0147,174.0219 (M+H),45.0,HILIC+,-,C00292,Other
+455,Thiopurine S-methyl ether,C6H6N4S,166.0313,167.0386 (M+H),33.0,HILIC+,HMDB0060412,C03542,Other
+456,Dimethylphenylenediamine,C8H12N2,136.1001,137.1073 (M+H),31.0,HILIC+,-,C04203,Other
+457,Phthalic anhydride,C8H4O3,148.016,149.0233 (M+H),30.0,HILIC+,-,-,Other
+458,Ecgonine,C12H12N,169.0891,170.0964 (M+H),52.0,HILIC+,HMDB0006548,C10858,Other
+459,Hydroxybenzoylecgonine,C16H20NO5,305.1263,306.1336 (M+H),40.0,HILIC+,-,-,Other
+460,Benzoylecgonine,C16H19NO4,289.1314,290.1387 (M+H),40.0,HILIC+,HMDB0041836,C12448,Other
+461,Methyl ecgonine,C10H17NO3,199.1208,200.1281 (M+H),30.0,HILIC+,HMDB0006406,C07572,Other
+462,Citalopram,C20H22FN2O,324.1638,325.1711 (M+H),26.0,HILIC+,HMDB0005038,D00673,Other
+463,Ranitidine,C13H23N4O3S,314.1412,315.1485 (M+H),30.0,HILIC+,HMDB0001930,C06860,Other
+464,Bupropion,C13H18ClNO,239.1077,240.1150 (M+H),29.0,HILIC+,HMDB0001510,-,Other
+465,Bufuralol,C16H23NO2,261.1729,262.1802 (M+H),29.0,HILIC+,-,-,Other
+466,Midazolam,C18H13ClFN3,325.0782,326.0855 (M+H),30.0,HILIC+,HMDB0014821,C07524,Other
+467,Tolbutamide,C12H18N2O3S,270.1038,271.1111 (M+H),26.0,HILIC+,HMDB0015256,C07148,Other
