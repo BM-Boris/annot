@@ -513,3 +513,4 @@ Nitrogen bases, Nucleic acids, nucleosides, and nucleotides"
 465,Bufuralol,C16H23NO2,261.1729,262.1802 (M+H),29.0,HILIC+,-,-,Other
 466,Midazolam,C18H13ClFN3,325.0782,326.0855 (M+H),30.0,HILIC+,HMDB0014821,C07524,Other
 467,Tolbutamide,C12H18N2O3S,270.1038,271.1111 (M+H),26.0,HILIC+,HMDB0015256,C07148,Other
+468,Glutamine,C5H10N2O3,146.0691,145.0618 (M-H),87.0,C18-,HMDB0000641,C00064,Amino acids and AA-derivatives
