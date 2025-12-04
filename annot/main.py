@@ -122,8 +122,7 @@ def run_lc(
     lib : {"hmdb", "annot"}, default "hmdb"
         Which LC library to use.
     shift : {"auto", float}, default "auto"
-        RT shift (only for lib="annot"). If "auto", infer using Glutamine (pos) or
-        Glutamate (neg).
+        RT shift (only for lib="annot"). If "auto", infer using Glutamine 
 
     Returns
     -------
@@ -251,7 +250,7 @@ def run_lc(
     rt_shift = 0.0
     if lib == "annot":
         if shift == "auto":
-            anchor_name = "glutamine" if ion_mode == "pos" else "glutamate"
+            anchor_name = "glutamine" 
             mask_anchor = lib_lc[name_col].str.lower() == anchor_name
             if not mask_anchor.any():
                 print(f"[LC] Anchor {anchor_name} not found in library, shift set to 0")
