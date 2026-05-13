@@ -1,7 +1,21 @@
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
-import pkg_resources
+from importlib import resources
+
+
+def _read_csv_with_fallback(path) -> pd.DataFrame:
+    for enc in ("utf-8", "latin-1"):
+        try:
+            return pd.read_csv(path, low_memory=False, encoding=enc)
+        except UnicodeDecodeError:
+            continue
+    return pd.read_csv(
+        path,
+        low_memory=False,
+        encoding="utf-8",
+        encoding_errors="ignore",
+    )
 
 
 def load_library_data(
@@ -13,9 +27,10 @@ def load_library_data(
 
     Parameters
     ----------
-    library_type : {"gc", "lc", "annot"}
+    library_type : {"gc", "lc", "t3db", "annot"}
         - "gc": loads data/gcms_lib.csv (GC-MS library with RT).
         - "lc": loads hmdb.csv (LC-MS library with monoisotopic masses).
+        - "t3db": loads data/t3db.csv (T3DB library with monoisotopic masses).
         - "annot": loads data/lc_lib.csv (internal LC-MS annotated library with RT).
     path : str or None, default None
         Optional explicit path to a library file. If provided, it overrides the
@@ -26,31 +41,23 @@ def load_library_data(
     pandas.DataFrame
         Loaded library table.
     """
-    if library_type not in {"gc", "lc", "annot"}:
-        raise ValueError("library_type must be 'gc', 'lc', or 'annot'")
+    if library_type not in {"gc", "lc", "t3db", "annot"}:
+        raise ValueError("library_type must be 'gc', 'lc', 't3db', or 'annot'")
 
-    filename = path
-    if filename is None:
+    if path is None:
         if library_type == "gc":
             filename = "data/gcms_lib.csv"
         elif library_type == "lc":
             filename = "data/hmdb.csv"
+        elif library_type == "t3db":
+            filename = "data/t3db.csv"
         else:
             filename = "data/lc_lib.csv"
-        filename = pkg_resources.resource_filename(__name__, filename)
+        resource = resources.files(__package__).joinpath(filename)
+        with resources.as_file(resource) as resource_path:
+            return _read_csv_with_fallback(resource_path)
 
-    for enc in ("utf-8", "latin-1"):
-        try:
-            return pd.read_csv(filename, low_memory=False, encoding=enc)
-        except UnicodeDecodeError:
-            continue
-    # last resort: errors='ignore'
-    return pd.read_csv(
-        filename,
-        low_memory=False,
-        encoding="utf-8",
-        encoding_errors="ignore",
-    )
+    return _read_csv_with_fallback(path)
 
 
 def pre_process(features: pd.DataFrame, lib_gc: pd.DataFrame):
@@ -94,8 +101,8 @@ def run_lc(
     show_progress: bool = True,
 ) -> pd.DataFrame:
     """
-    Annotate LC-MS data by matching m/z features to either the HMDB-based library
-    (mass + adduct matching) or the internal annotated LC library with RT.
+    Annotate LC-MS data by matching m/z features to a mass-only library
+    (HMDB/T3DB + adduct matching) or the internal annotated LC library with RT.
 
     Parameters
     ----------
@@ -116,19 +123,19 @@ def run_lc(
     ion_mode : {"pos", "neg"}, default "pos"
         Ionization mode:
           - "pos": positive ESI, uses [M+H]+, [M+Na]+, [M+NH4]+, [M+K]+ by default.
-          - "neg": negative ESI, uses [M-H]- and [M+Cl]- by default.
+          - "neg": negative ESI, uses [M-H]-, [M-2H]2-, and [M+Cl]- by default.
     adducts : list of str or None, default None
         Subset of adducts to use. If None, all defaults for the given ion_mode are used.
-    lib : {"hmdb", "annot"}, default "hmdb"
+    lib : {"hmdb", "t3db", "annot"}, default "hmdb"
         Which LC library to use.
     shift : {"auto", float}, default "auto"
-        RT shift (only for lib="annot"). If "auto", infer using Glutamine 
+        RT shift (only for lib="annot"). If "auto", infer using Glutamine.
 
     Returns
     -------
     pandas.DataFrame
-        Columns include:
-          * mz_col
+        Matched rows only. The output keeps the selected m/z and, when used, RT
+        columns, with annotation columns appended:
           * annotation (best hit)
           * adduct (best adduct)
           * ppm_error (for the best hit)
@@ -136,10 +143,12 @@ def run_lc(
           * candidates: all matches within mz_diff, sorted by ppm or distance
     """
     lib = lib.lower()
-    if lib not in {"hmdb", "annot"}:
-        raise ValueError("lib must be 'hmdb' or 'annot'")
+    if lib not in {"hmdb", "t3db", "annot"}:
+        raise ValueError("lib must be 'hmdb', 't3db', or 'annot'")
+    if ion_mode not in {"pos", "neg"}:
+        raise ValueError("ion_mode must be 'pos' or 'neg'")
 
-    if lib == "hmdb":
+    if lib in {"hmdb", "t3db"}:
         print(f"[LC] Library: {lib.upper()}, ion_mode={ion_mode}, mz_diff={mz_diff}")
     else:
         print(
@@ -148,8 +157,10 @@ def run_lc(
         )
 
     features = pd.read_csv(data, sep=sep)
+    if mz_col not in features.columns:
+        raise ValueError(f"mz_col '{mz_col}' not found in feature table")
 
-    if lib == "hmdb":
+    if lib in {"hmdb", "t3db"}:
         features = features[[mz_col]].astype("float64")
     else:
         if rt_col not in features.columns:
@@ -160,12 +171,23 @@ def run_lc(
 
     mz_array = features[mz_col].to_numpy()
 
-    lib_lc = load_library_data("lc" if lib == "hmdb" else "annot")
-
     if lib == "hmdb":
-        mass_col = "monisotopic_molecular_weight"
-        name_col = "name"
-        formula_col = "chemical_formula"
+        library_type = "lc"
+    elif lib == "t3db":
+        library_type = "t3db"
+    else:
+        library_type = "annot"
+    lib_lc = load_library_data(library_type)
+
+    if lib in {"hmdb", "t3db"}:
+        if lib == "hmdb":
+            mass_col = "monisotopic_molecular_weight"
+            name_col = "name"
+            formula_col = "chemical_formula"
+        else:
+            mass_col = "MonoisotopicMass"
+            name_col = "Name"
+            formula_col = "Chemical Formula"
         lib_lc[mass_col] = pd.to_numeric(
             lib_lc[mass_col].astype(str).str.split().str[0],
             errors="coerce",
@@ -205,8 +227,8 @@ def run_lc(
     lib_name_array = lib_lc[name_col].astype(str).to_numpy()
     lib_formula_array = lib_lc[formula_col].astype(str).to_numpy()
 
-    # Configure adducts (HMDB mode)
-    if lib == "hmdb":
+    # Configure adducts (mass-only LC modes)
+    if lib in {"hmdb", "t3db"}:
         proton = 1.007276
         mass_Na = 22.989218
         mass_NH4 = 18.033823
@@ -220,13 +242,12 @@ def run_lc(
                 "[M+NH4]+": (mass_NH4, 1),
                 "[M+K]+": (mass_K, 1),
             }
-        elif ion_mode == "neg":
+        else:
             default_adducts = {
                 "[M-H]-": (-proton, 1),
+                "[M-2H]2-": (-2 * proton, 2),
                 "[M+Cl]-": (mass_Cl, 1),
             }
-        else:
-            raise ValueError("ion_mode must be 'pos' or 'neg'")
 
         if adducts is not None:
             used_adducts = {k: v for k, v in default_adducts.items() if k in adducts}
@@ -250,7 +271,7 @@ def run_lc(
     rt_shift = 0.0
     if lib == "annot":
         if shift == "auto":
-            anchor_name = "glutamine" 
+            anchor_name = "glutamine"
             mask_anchor = lib_lc[name_col].str.lower() == anchor_name
             if not mask_anchor.any():
                 print(f"[LC] Anchor {anchor_name} not found in library, shift set to 0")
@@ -273,7 +294,6 @@ def run_lc(
                 mz_vals = features[mz_col].to_numpy()
                 rel_mz_anchor = np.abs(mz_vals - ref_mz) / ref_mz
                 rt_vals = features[rt_col].to_numpy()
-                rel_rt_anchor = np.abs(rt_vals - ref_rt) / ref_rt
                 hit_idx = np.where(rel_mz_anchor < mz_diff)[0]
                 if hit_idx.size == 0:
                     print(
@@ -305,7 +325,7 @@ def run_lc(
         best_formula = None
         candidates_raw: list[dict] = []
 
-        if lib == "hmdb":
+        if lib in {"hmdb", "t3db"}:
             # Используем заранее посчитанные theo_mz_by_adduct (пункт 7)
             for adduct_name, theo_mz in theo_mz_by_adduct.items():
                 rel_error = np.abs((theo_mz - mz) / theo_mz)
@@ -380,7 +400,7 @@ def run_lc(
             adduct_hits.append(best_adduct)
             ppm_best.append(best_ppm)
             best_formulas.append(best_formula)
-            if lib == "hmdb":
+            if lib in {"hmdb", "t3db"}:
                 best_distances.append(best_ppm)
             else:
                 best_distances.append(best_distance)
@@ -454,10 +474,17 @@ def run_gc(
     Returns
     -------
     pandas.DataFrame
-        Original m/z and RT plus annotation/notes and candidates (all hits within
-        tolerances, sorted by distance), filtered to the best groups per chemical.
+        Matched rows only. The output keeps the selected m/z and RT columns,
+        with annotation/notes and candidates appended, filtered to the best
+        groups per chemical.
     """
     features = pd.read_csv(data, sep=sep)
+    missing_cols = [col for col in (mz_col, rt_col) if col not in features.columns]
+    if missing_cols:
+        raise ValueError(
+            "Missing required feature column(s): " + ", ".join(missing_cols)
+        )
+
     features = features[[mz_col, rt_col]].astype("float64")
 
     print(
