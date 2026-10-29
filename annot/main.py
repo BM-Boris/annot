@@ -518,7 +518,7 @@ def run_gc(
         cand_idx = np.where(dmz1 <= tol)[0]
 
         if cand_idx.size == 0:
-            print("No p,p'-DDEmz1 found in data, using shift = 0")
+            print("No p,p'-DDE mz1 found in data, using shift = 0")
             shift = 0
         else:
             cand_shifts = rt[cand_idx] - rt1_ref
@@ -553,11 +553,11 @@ def run_gc(
                     confirmed = "C13"
                     confirmed_i = k
                     print(
-                        "Shift chosen by p,p'-DDEmz1 candidate confirmed by C13_pp_DDE"
+                        "Shift chosen by p,p'-DDE mz1 candidate confirmed by C13_pp_DDE"
                     )
                 else:
                     print(
-                        "C13_pp_DDE found in data, but no p,p'-DDEmz1 candidate "
+                        "C13_pp_DDE found in data, but no p,p'-DDE mz1 candidate "
                         "matches its RT shift"
                     )
 
@@ -566,14 +566,14 @@ def run_gc(
             ].iloc[0]
             mz0_shift = anchor_shift(row0.mz, row0.time * 60)
             if mz0_shift is None:
-                print("p,p'-DDEmz0 not found in data")
+                print("p,p'-DDE mz0 not found in data")
             else:
                 if confirmed == "C13":
                     if abs(mz0_shift - cand_shifts[confirmed_i]) <= time_range:
-                        print("Shift also consistent with p,p'-DDEmz0")
+                        print("Shift also consistent with p,p'-DDE mz0")
                     else:
                         print(
-                            "p,p'-DDEmz0 shift not consistent with C13-based shift"
+                            "p,p'-DDE mz0 shift not consistent with C13-based shift"
                         )
                 else:
                     k = match_anchor(mz0_shift)
@@ -582,24 +582,24 @@ def run_gc(
                         confirmed = "mz0"
                         confirmed_i = k
                         print(
-                            "Shift chosen by p,p'-DDEmz1 candidate confirmed by "
-                            "p,p'-DDEmz0"
+                            "Shift chosen by p,p'-DDE mz1 candidate confirmed by "
+                            "p,p'-DDE mz0"
                         )
                     else:
                         print(
-                            "p,p'-DDEmz0 found in data, but no p,p'-DDEmz1 candidate "
+                            "p,p'-DDE mz0 found in data, but no p,p'-DDE mz1 candidate "
                             "matches its RT shift"
                         )
 
             if confirmed is None:
                 if cand_idx.size > 1:
                     print(
-                        "Multiple p,p'-DDEmz1 candidates; using best m/z match "
+                        "Multiple p,p'-DDE mz1 candidates; using best m/z match "
                         "(no confirmation)"
                     )
                 else:
                     print(
-                        "Single p,p'-DDEmz1 candidate; using best m/z match"
+                        "Single p,p'-DDE mz1 candidate; using best m/z match"
                     )
 
             print("Shift = {} seconds based on p,p'-DDE".format(shift))
