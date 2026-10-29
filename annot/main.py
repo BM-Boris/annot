@@ -357,7 +357,7 @@ def run_lc(
             rel_mz = np.abs(lib_mz_array - mz) / lib_mz_array
             rel_rt = np.abs(lib_time_array - rt_val) / lib_time_array
             matched_indices = np.where(
-                (rel_mz < mz_diff) & (rel_rt < time_diff)
+                (rel_mz < mz_diff) & (rel_rt < np.minimum(time_diff, 45 / lib_time_array))
             )[0]
 
             if matched_indices.size > 0:
