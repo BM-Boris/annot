@@ -60,6 +60,36 @@ def load_library_data(
     return _read_csv_with_fallback(path)
 
 
+def _load_user_library(path, gc=False):
+    library = _read_csv_with_fallback(path)
+    required = ["mz", "name", "rt", "ion"] if gc else ["mz", "name"]
+    missing = [col for col in required if col not in library.columns]
+    if missing:
+        raise ValueError("Missing required library column(s): " + ", ".join(missing))
+    if library.empty:
+        raise ValueError("User library must contain at least one row")
+    if not gc and "rt" in library.columns:
+        if library["rt"].fillna("").astype(str).str.strip().eq("").all():
+            library = library.drop(columns="rt")
+    for col in ("mz", "rt"):
+        if col in library.columns:
+            library[col] = pd.to_numeric(library[col], errors="coerce")
+            if not (np.isfinite(library[col]) & (library[col] > 0)).all():
+                raise ValueError(
+                    f"Library '{col}' must contain finite positive numbers in every row"
+                )
+    for col in (["name", "ion"] if gc else ["name"]):
+        library[col] = library[col].fillna("").astype(str)
+        if library[col].str.strip().eq("").any():
+            raise ValueError(f"Library '{col}' must be non-empty in every row")
+    if not gc:
+        for col in ("adduct", "formula"):
+            if col not in library.columns:
+                library[col] = None
+            library[col] = library[col].astype(object).where(library[col].notna(), None)
+    return library
+
+
 def pre_process(features: pd.DataFrame, lib_gc: pd.DataFrame):
     """
     Preprocess feature and GC library tables for GC-MS matching.
@@ -99,6 +129,7 @@ def run_lc(
     lib: str = "hmdb",
     shift: str | float = "auto",
     show_progress: bool = True,
+    library_path: str | None = None,
 ) -> pd.DataFrame:
     """
     Annotate LC-MS data by matching m/z features to a mass-only library
@@ -113,23 +144,29 @@ def run_lc(
     mz_col : str, default "mz"
         Name of the m/z column in the input feature table.
     rt_col : str, default "rt"
-        Name of the retention time column (used when lib="annot").
+        Name of the retention time column when matching RT.
     save : str or None, default None
         If provided, save the annotated table to this path (CSV).
     mz_diff : float, default 5e-6
         Maximum allowed relative m/z difference for a match.
     time_diff : float, default 0.05
-        Maximum allowed relative RT difference (used when lib="annot").
+        Maximum allowed relative RT difference when matching RT, also capped
+        at 45 seconds after shift correction.
     ion_mode : {"pos", "neg"}, default "pos"
         Ionization mode:
           - "pos": positive ESI, uses [M+H]+, [M+Na]+, [M+NH4]+, [M+K]+ by default.
           - "neg": negative ESI, uses [M-H]-, [M-2H]2-, and [M+Cl]- by default.
     adducts : list of str or None, default None
         Subset of adducts to use. If None, all defaults for the given ion_mode are used.
+        Only used for bundled mass-only libraries; user ion m/z is matched directly.
     lib : {"hmdb", "t3db", "annot"}, default "hmdb"
-        Which LC library to use.
+        Which bundled LC library to use. Overridden by library_path.
     shift : {"auto", float}, default "auto"
-        RT shift (only for lib="annot"). If "auto", infer using Glutamine.
+        RT shift in seconds when matching RT. If "auto", infer using Glutamine
+        for lib="annot"; use zero for a user library.
+    library_path : str or None, default None
+        User CSV overriding lib: required mz/name, optional rt/adduct/formula.
+        mz is ion m/z; a populated rt column enables RT matching in seconds.
 
     Returns
     -------
@@ -143,12 +180,17 @@ def run_lc(
           * candidates: all matches within mz_diff, sorted by ppm or distance
     """
     lib = lib.lower()
-    if lib not in {"hmdb", "t3db", "annot"}:
+    if library_path is not None:
+        lib = "custom"
+    elif lib not in {"hmdb", "t3db", "annot"}:
         raise ValueError("lib must be 'hmdb', 't3db', or 'annot'")
     if ion_mode not in {"pos", "neg"}:
         raise ValueError("ion_mode must be 'pos' or 'neg'")
 
-    if lib in {"hmdb", "t3db"}:
+    lib_lc = _load_user_library(library_path) if lib == "custom" else None
+    uses_rt = lib == "annot" or (lib_lc is not None and "rt" in lib_lc.columns)
+
+    if not uses_rt:
         print(f"[LC] Library: {lib.upper()}, ion_mode={ion_mode}, mz_diff={mz_diff}")
     else:
         print(
@@ -160,26 +202,27 @@ def run_lc(
     if mz_col not in features.columns:
         raise ValueError(f"mz_col '{mz_col}' not found in feature table")
 
-    if lib in {"hmdb", "t3db"}:
+    if not uses_rt:
         features = features[[mz_col]].astype("float64")
     else:
         if rt_col not in features.columns:
             raise ValueError(
-                f"rt_col '{rt_col}' not found in feature table for annot lib"
+                f"rt_col '{rt_col}' not found in feature table for {lib} lib"
             )
         features = features[[mz_col, rt_col]].astype("float64")
 
     mz_array = features[mz_col].to_numpy()
 
-    if lib == "hmdb":
-        library_type = "lc"
-    elif lib == "t3db":
-        library_type = "t3db"
-    else:
-        library_type = "annot"
-    lib_lc = load_library_data(library_type)
+    if lib_lc is None:
+        library_type = "lc" if lib == "hmdb" else lib
+        lib_lc = load_library_data(library_type)
 
-    if lib in {"hmdb", "t3db"}:
+    if lib == "custom":
+        mass_col, name_col, formula_col = "mz", "name", "formula"
+        lib_mz_array = lib_lc[mass_col].to_numpy()
+        adduct_labels = lib_lc["adduct"].to_numpy()
+        lib_time_array = lib_lc["rt"].to_numpy() if uses_rt else None
+    elif lib in {"hmdb", "t3db"}:
         if lib == "hmdb":
             mass_col = "monisotopic_molecular_weight"
             name_col = "name"
@@ -225,7 +268,10 @@ def run_lc(
         time_array = features[rt_col].to_numpy()
 
     lib_name_array = lib_lc[name_col].astype(str).to_numpy()
-    lib_formula_array = lib_lc[formula_col].astype(str).to_numpy()
+    lib_formula_array = (
+        lib_lc[formula_col].to_numpy() if lib == "custom"
+        else lib_lc[formula_col].astype(str).to_numpy()
+    )
 
     # Configure adducts (mass-only LC modes)
     if lib in {"hmdb", "t3db"}:
@@ -265,10 +311,13 @@ def run_lc(
             theo_mz_by_adduct[adduct_name] = (lib_mz_array + mass_shift) / charge
     else:
         used_adducts = None
-        theo_mz_by_adduct = {}
+        theo_mz_by_adduct = {"": lib_mz_array} if not uses_rt else {}
 
     # RT shift for annot library
     rt_shift = 0.0
+    if lib == "custom" and uses_rt:
+        rt_shift = 0.0 if shift == "auto" else float(shift)
+        print(f"[LC] User library RT shift: {rt_shift} sec (auto uses zero)")
     if lib == "annot":
         if shift == "auto":
             anchor_name = "glutamine"
@@ -325,7 +374,7 @@ def run_lc(
         best_formula = None
         candidates_raw: list[dict] = []
 
-        if lib in {"hmdb", "t3db"}:
+        if not uses_rt:
             # Используем заранее посчитанные theo_mz_by_adduct (пункт 7)
             for adduct_name, theo_mz in theo_mz_by_adduct.items():
                 rel_error = np.abs((theo_mz - mz) / theo_mz)
@@ -337,11 +386,15 @@ def run_lc(
                 for idx in matched_indices:
                     ppm = float(rel_error[idx] * 1e6)
                     name = lib_name_array[idx]
-                    formula = str(lib_formula_array[idx])
+                    formula = (
+                        lib_formula_array[idx] if lib == "custom"
+                        else str(lib_formula_array[idx])
+                    )
+                    adduct_label = adduct_labels[idx] if lib == "custom" else adduct_name
                     candidates_raw.append(
                         {
                             "name": name,
-                            "adduct": adduct_name,
+                            "adduct": adduct_label,
                             "ppm": ppm,
                             "formula": formula,
                         }
@@ -350,7 +403,7 @@ def run_lc(
                     if best_ppm is None or ppm < best_ppm:
                         best_ppm = ppm
                         best_name = name
-                        best_adduct = adduct_name
+                        best_adduct = adduct_label
                         best_formula = formula
         else:
             rt_val = float(features.iloc[i_feat][rt_col] - rt_shift)
@@ -400,11 +453,11 @@ def run_lc(
             adduct_hits.append(best_adduct)
             ppm_best.append(best_ppm)
             best_formulas.append(best_formula)
-            if lib in {"hmdb", "t3db"}:
+            if not uses_rt:
                 best_distances.append(best_ppm)
             else:
                 best_distances.append(best_distance)
-            if lib == "annot":
+            if uses_rt:
                 candidates_all.append(sorted(candidates_raw, key=lambda c: c["dist"]))
             else:
                 candidates_all.append(sorted(candidates_raw, key=lambda c: c["ppm"]))
@@ -444,6 +497,7 @@ def run_gc(
     time_range: float = 2.0,
     ngroup: int = 3,
     show_progress: bool = True,
+    library_path: str | None = None,
 ) -> pd.DataFrame:
     """
     Annotate GC-MS data by matching features to a reference library with RT anchoring.
@@ -461,7 +515,8 @@ def run_gc(
     save : str or None, default None
         If provided, save the annotated table to this path (CSV).
     shift : {"auto", float}, default "auto"
-        If "auto", infer RT shift from 4,4'-DDE. If a number, use that value (in seconds).
+        If "auto", infer RT shift from p,p'-DDE for the bundled library;
+        use zero for a user library. Numeric shifts are in seconds.
     time_diff : float, default 0.05
         Maximum allowed relative RT difference for a match.
     mz_diff : float, default 5e-6
@@ -470,6 +525,8 @@ def run_gc(
         RT window (in seconds) within which peaks are grouped.
     ngroup : int, default 3
         Minimum group size required to keep a group.
+    library_path : str or None, default None
+        User CSV with mz, rt (seconds), name, and ion (mz0, mz1, etc.).
 
     Returns
     -------
@@ -492,7 +549,14 @@ def run_gc(
         f"time_range={time_range}, ngroup={ngroup}, shift={shift}"
     )
 
-    lib_gc = load_library_data("gc")
+    if library_path is None:
+        lib_gc = load_library_data("gc")
+    else:
+        lib_gc = _load_user_library(library_path, gc=True)[["mz", "rt", "name", "ion"]]
+        lib_gc = lib_gc.rename(columns={"rt": "time", "name": "Name", "ion": "note"})
+        if shift == "auto":
+            shift = 0.0
+            print("[GC] User library: auto shift uses zero")
     mz_array, time_array, lib_mz_array, lib_time_array = pre_process(
         features,
         lib_gc,
@@ -502,7 +566,8 @@ def run_gc(
     notes = np.empty(len(mz_array), dtype=object)
     candidates_all: list[list[dict] | None] = []
 
-    lib_time_array = lib_time_array * 60
+    if library_path is None:
+        lib_time_array = lib_time_array * 60
 
     if shift == "auto":
         tol = 5e-6  # relative m/z tolerance
